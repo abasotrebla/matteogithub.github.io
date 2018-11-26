@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Enrico Glerean (PhD D.Tech.)"
+title                    : "Matteo Fraschini"
 title_separator          : "-"
-name                     : &name "Enrico Glerean"
-description              : &description "Brain, Networks, Behaviour"
-url                      : https://eglerean.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Matteo Fraschini"
+description              : &description "Brain, Networks"
+url                      : https://matteogithub.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "eglerean/eglerean.github.io"
+repository               : "matteogithub/matteogithub.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -55,7 +55,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : eglerean
+  username               : matteo_brainnet
 facebook:
   username               :
   app_id                 :
@@ -78,14 +78,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Enrico Glerean<br>(PhD D.Tech.)"
+  name             : "Matteo Fraschini"
   avatar           : "EG_profile.jpg"
-  bio              : "Postdoctoral scientist at Aalto University, Helsinki Institute of Information Technology. Data agent/data manager at Aalto University. Neuroscience, networks, quantified behaviour, signal processing, web technologies, open data, social cognition, emotions."
-  location         : "Finland"
+  bio              : "Assistant Professor in Computer Engineering at Departement of Electrical and Electronic Engineering (University of Cagliari)."
+  location         : "Italy"
   employer         : 
-  googlescholar    : "https://scholar.google.fi/citations?user=sD90SmMAAAAJ&hl=en"
-  email            : "enrico.glerean@aalto.fi"
-  uri              : "https://eglerean.wordpress.com/"
+  googlescholar    : "https://scholar.google.it/citations?hl=it&user=R5gm9Z8AAAAJ&view_op=list_works&sortby=pubdate"
+  email            : "fraschin@unica.it"
+  uri              : "http://people.unica.it/matteofraschini/"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -104,13 +104,13 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "eglerean"
+  twitter          : "matteogithub"
   vine             :
   weibo            :
   xing             :
   youtube          :
   wikipedia        :
-  publons          : "https://publons.com/author/732978/enrico-glerean#"
+  publons          : 
 
 
 # Reading Files
