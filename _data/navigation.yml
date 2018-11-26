@@ -3,26 +3,11 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Teaching and Talks"
-    url: /teaching/    
-
-#  - title: "Teaching"
-#    url: /teaching/    
-    
-  - title: "Software"
-    url: /code/
-        
-  - title: "News"
-    url: /year-archive/
-      
-  - title: "Blog"
-    url: http://eglerean.wordpress.com/	   
-
-  - title: "CV"
-    url: /files/Enrico_Glerean_CV.pdf
+  - title: "Teaching"
+    url: /teaching/
 
   - title: "About me"
     url: /
- 
+
 #  - title: "Guide"
 #    url: /markdown/
