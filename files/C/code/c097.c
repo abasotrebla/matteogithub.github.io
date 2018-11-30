@@ -28,10 +28,10 @@ void ordina(int *v, int n) {
 
   for(i=0; i<n-1; i++)  {
       for(j=0; j<n-1; j++) {
-          if(v[j] > v[j+1]) {
-              tmp = v[j];
-              v[j] = v[j+1];
-              v[j+1] = tmp;
+          if(*(v+j) > *(v+j+1)) {
+              tmp = *(v+j);
+              *(v+j) = *(v+j+1);
+              *(v+j+1) = tmp;
           }
       }
   }

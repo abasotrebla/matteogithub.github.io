@@ -29,8 +29,8 @@ void ordina(int *v, int n) {
 
   for(i=0; i<n-1; i++)
       for(j=0; j<n-1; j++)
-          if(v[j] > v[j+1])
-            scambia(&v[j], &v[j+1]);
+          if(*(v+j) > *(v+j+1))
+            scambia((v+j), (v+j+1));
 }
 
 void scambia(int *x, int *y) {
