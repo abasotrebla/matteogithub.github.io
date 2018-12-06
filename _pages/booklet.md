@@ -44,3 +44,23 @@ Every C program has a main function. This function is called `main`. Your progra
 
 The last instruction of the function is `return 0;`. This is the value your function in returning. If you omit to include this instruction your program will work as well, but you will discover later that this is not an aesthetic point.
 
+
+
+#### Level 1
+
+Now you are ready to use *variables*. Think about *variables* as containers that will store the data you want to use during your program execution. The easy part is that you can refer to this container (a block of the memory of your computer) with a name, wherever it is. You can choose the name you like, there are only few simple rules you have to respect for the name. However, just try to use a name that can allows to understand what the variable will store. 
+
+In C, before to use a variable you have to *declare* it. The declaration is important because it links your variable with a *type*. When you choose a type, you are defining the dimension of the container and the operation you will be able to perform on it. The dimension may still depend on the architecture of your computer/machine. This is an example of variable declaration:
+
+```c
+int number;
+```
+
+With this instruction you are declaring a variable named `number` as an integer. What happens is that a block of memory will be reserved for this variable and that you can access to this block of memory using its name. How is this block long? Probably 4 byte, but just test it yourself:
+
+```C
+
+```
+
+
+
