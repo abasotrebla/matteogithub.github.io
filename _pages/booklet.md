@@ -118,7 +118,6 @@ You can extend your program adding *flow control statements* which allows to sel
 
 ```c
 #include <stdio.h>
-
 int main() {
   int n;
 
@@ -128,6 +127,21 @@ int main() {
   	printf("\n%d is even\n",n);
   else 
   	printf("\n%d is odd\n",n);
+}
+```
+
+It is important to keep in mind that in C any **non-zero** values is interpreted as **true** (**false** if it is **zero**). Relational and logical operators may be used to build more complex expressions, see this example:
+
+```c
+#include <stdio.h> 
+int main() {
+   int year;
+
+   printf("Insert a year (i.e., 2018): ");
+   scanf("%d",&year);
+   if ((year%4 == 0 && year%100 != 0) || year%400 == 0)
+      printf("\n%d is a leap year\n", year);
+   else printf("\n%d is not a leap year\n", year);
 }
 ```
 
