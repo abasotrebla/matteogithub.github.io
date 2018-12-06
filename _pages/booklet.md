@@ -8,7 +8,7 @@
 
 Dear student, this document is for you. I know that attending the lectures may be sometime hard, sometime boring and even when it is not, there are several other reasons that make it difficult to go back home and study what you have listened.
 
-Here you find the most significant concepts that I have discussed during the classes, with a summary and a description of what I think it is more important for you, the *take home* messagge.
+Here you find the most significant concepts that I have discussed during the classes, with a summary and a description of what I think it is more important for you, the *take home* messagge. At the following link https://matteogithub.github.io/teaching/ you find all the slides (in PDF and md format) and the *.c* file of the scripts included.
 
 This is, obviously, an ongoing work and can not replace a book and can not be enought if you do not spent time *playing* with the code. Learning to code is not merely learning the *syntax* of a specific language. It means much more, creativity, logical thinking and determination are extremely important in this context. 
 
@@ -145,9 +145,28 @@ int main() {
 }
 ```
 
-Another commonly used *flow control statement* is the `switch-case`. This statement allows to select a specific block of instructions based on the value (`int` or `char`) assumed by a variable or by an expression tested for equality against a list of constant values. 
+Another commonly used *flow control statement* is the `switch-case`. This statement allows to select a specific block of instructions based on the value (`int` or `char`) assumed by a variable or by an expression tested for equality against a list of constant values. See the following example:
 
+```c
+#include <stdio.h>
+int main() {
+  int n;
+  printf("Type a positive integer: ");
+  scanf("%d",&n);
 
+  switch (n % 2)
+  {
+    case 0:
+    	printf("\nThe number %d is even\n",n);
+    	break;
+    case 1:
+      printf("\nThe number %d is odd\n",n);
+    	break;
+  }
+}
+```
+
+Note that the expression `n % 2`, where `%` is called modulus operator, returns the remainder when `n` is divided by 2. 
 
 
 
