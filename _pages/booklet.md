@@ -114,7 +114,26 @@ This very simple program takes as input two integers from the keyboard (base and
 
 #### Level 3 
 
-...
+You can extend your program adding *flow control statements* which allows to select what actions to take on the basis of specific conditions. The more common *flow control statement* is the **if** statement which represents the most simple form of the *branching*. It takes and evaluate an expression and if the expression is true then the instruction (or block of instructions) gets executed otherwise the instruction (or block of instructions) is skipped. You can combine with the **else** statement to create an alternative branch with the instruction (or block of instructions) to execute in the case the condition is false. Remember that a block is defined by using the `{}`, and this is very important if you want to specify a set of instructions, otherwise your program will execute only the first instruction. See this simple program to evaluate if a number is even or odd.
+
+```c
+#include <stdio.h>
+
+int main() {
+  int n;
+
+  printf("Type a positive integer: ");
+  scanf("%d",&n);  
+  if(n%2 == 0) 
+  	printf("\n%d is even\n",n);
+  else 
+  	printf("\n%d is odd\n",n);
+}
+```
+
+
+
+
 
 
 
