@@ -14,7 +14,7 @@ This is, obviously, an ongoing work and can not replace a book and can not be en
 
 
 
-#### Level 0
+#### Level 0: to start
 
 Probably, right now, your level is **0**. It means that, as for most of your colleagues, you have never coded before. This is not a problem. Indeed, this booklet is for people like you. There are not prerequisites for this course. The number 0 is very important, you will read about this number again and again in this booklet. Your level will change, will increase, adding more competencies, the offset from the initial level will change. Just rember this when we will talk about *arrays*. You will understand that starting from 0 may be relevant!
 
@@ -46,7 +46,7 @@ The last instruction of the function is `return 0;`. This is the value your func
 
 
 
-#### Level 1
+#### Level 1: variables
 
 Now you are ready to use *variables*. Think about *variables* as containers that will store the data you want to use during your program. The easy part is that you can refer to this container (a block of the memory of your computer) with a name, wherever it is. You can choose the name you like, there are only few simple rules you have to respect for the name. However, just try to use a name that can allows to understand what the variable will store. 
 
@@ -91,7 +91,7 @@ It is really very important to do not confuse the symbol `=` with the symbol `==
 
 
 
-#### Level 2
+#### Level 2: input and output
 
 To further increse your level you certanly need to learn how to use a very important and basic function. This is the `scanf`. The `scanf` is not always easy to use, you will understand later this, however, it represents the first tool you can use to allow an user interacting with your program. In particular, by using the `scanf` you can pass an *external* input to your program, reading the information needed using the keyboard. Here a simple example to show you how to use it:
 
@@ -112,9 +112,9 @@ This very simple program takes as input two integers from the keyboard (base and
 
 
 
-#### Level 3 
+#### Level 3: flow control statements
 
-You can extend your program adding *flow control statements* which allows to select what actions to take on the basis of specific conditions. The more common *flow control statement* is the **if** statement which represents the most simple form of the *branching*. It takes and evaluate an expression and if the expression is true then the instruction (or block of instructions) gets executed otherwise the instruction (or block of instructions) is skipped. You can combine with the **else** statement to create an alternative branch with the instruction (or block of instructions) to execute in the case the condition is false. Remember that a block is defined by using the `{}`, and this is very important if you want to specify a set of instructions, otherwise your program will execute only the first instruction. See this simple program to evaluate if a number is even or odd.
+You can extend your program adding *flow control statements* which allows to select what actions to take on the basis of specific conditions. The more common *flow control statement* is the **if** statement which represents the most simple form of the *branching*. It takes and evaluate an expression and if the expression is true then the instruction (or block of instructions) gets executed otherwise the instruction (or block of instructions) is skipped. You can combine with the **else** statement to create an alternative branch with the instruction (or block of instructions) to execute in the case the condition is false. Remember that a block is defined by using the `{}`, and this is very important if you want to specify a set of instructions, otherwise your program will execute only the first instruction that follows the expression to be tested. See this simple program to evaluate if a number is even or odd:
 
 ```c
 #include <stdio.h>
@@ -170,5 +170,7 @@ Note that the expression `n % 2`, where `%` is called modulus operator, returns 
 
 
 
+#### Level 4: loop statements
 
+If you want to build even more powerful program, more clear and concise scripts, all you need is a *loop statement*. When you need to execute an instruction (or a block of instructions) several time you have to define a loop. The basic rule in this case is: *never write the same instruction twice*. 
 
