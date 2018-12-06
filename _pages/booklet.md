@@ -4,7 +4,7 @@
 
 
 
-#### Introduction
+### Introduction
 
 Dear student, this document is for you. I know that attending the lectures may be sometime hard, sometime boring and even when it is not, there are several other reasons that make it difficult to go back home and study what you have listened.
 
@@ -14,7 +14,7 @@ This is, obviously, an ongoing work and can not replace a book and can not be en
 
 
 
-#### Level 0: to start
+### Level 0: to start
 
 Probably, right now, your level is **0**. It means that, as for most of your colleagues, you have never coded before. This is not a problem. Indeed, this booklet is for people like you. There are not prerequisites for this course. The number 0 is very important, you will read about this number again and again in this booklet. Your level will change, will increase, adding more competencies, the offset from the initial level will change. Just rember this when we will talk about *arrays*. You will understand that starting from 0 may be relevant!
 
@@ -46,7 +46,7 @@ The last instruction of the function is `return 0;`. This is the value your func
 
 
 
-#### Level 1: variables
+### Level 1: variables
 
 Now you are ready to use *variables*. Think about *variables* as containers that will store the data you want to use during your program. The easy part is that you can refer to this container (a block of the memory of your computer) with a name, wherever it is. You can choose the name you like, there are only few simple rules you have to respect for the name. However, just try to use a name that can allows to understand what the variable will store. 
 
@@ -91,7 +91,7 @@ It is really very important to do not confuse the symbol `=` with the symbol `==
 
 
 
-#### Level 2: input and output
+### Level 2: input and output
 
 To further increse your level you certanly need to learn how to use a very important and basic function. This is the `scanf`. The `scanf` is not always easy to use, you will understand later this, however, it represents the first tool you can use to allow an user interacting with your program. In particular, by using the `scanf` you can pass an *external* input to your program, reading the information needed using the keyboard. Here a simple example to show you how to use it:
 
@@ -112,7 +112,7 @@ This very simple program takes as input two integers from the keyboard (base and
 
 
 
-#### Level 3: flow control statements
+### Level 3: flow control statements
 
 You can extend your program adding *flow control statements* which allows to select what actions to take on the basis of specific conditions. The more common *flow control statement* is the **if** statement which represents the most simple form of the *branching*. It takes and evaluate an expression and if the expression is true then the instruction (or block of instructions) gets executed otherwise the instruction (or block of instructions) is skipped. You can combine with the **else** statement to create an alternative branch with the instruction (or block of instructions) to execute in the case the condition is false. Remember that a block is defined by using the `{}`, and this is very important if you want to specify a set of instructions, otherwise your program will execute only the first instruction that follows the expression to be tested. See this simple program to evaluate if a number is even or odd:
 
@@ -170,7 +170,7 @@ Note that the expression `n % 2`, where `%` is called modulus operator, returns 
 
 
 
-#### Level 4: loop statements
+### Level 4: loop statements
 
 If you want to build even more powerful program, more clear and concise scripts, all you need is a *loop statement*. When you need to execute an instruction (or a block of instructions) several time you have to define a loop. The basic rule in this case is: *never write the same instruction twice*. The loop statement you will use more frequently is the **for**. In its more simple form, a `for` loop will look like this: `for(i=0;i<n;i++)` followed by an instruction or a block of instructions (in this case you need to define a block using `{}`). As you may have noticed this instruction contains three different fields (separated by a `;`). In the first field, the variable `i`, that needs to be declared somewhere, represents the variable that control the loop. The instruction `i=0` will be executed only the first time and allows to initialize this variable. Keep in mind the initializing is very important, and that a wrong assigniment in this case may strongly affect your program even if you do not get any error from the compiler. The second filed contains a conditional expression (`i<n`) that will be evaluated **before** to execute the instruction or the block. This is the reason why a `for` loop (as well as a `while` loop) may be never executed. If the expression is false the instrucion (or the block) will be skipped. The third field (`i++`), the increment of the control variable will be executed after all the instructions contained in the loop. The instruction `i++` is another way to write the expression `i=i+1`. When you use this compact form, you may need, in some specific case, to pay attention on the difference between `i++` and `++i`. This is not the case of a `for` loop, when the increment of `i` will be done after all the other instructions, but if the increment is inside an expression you may observe a different behaviour between the two different increments. Try to assign to another variable the result of the increment and see what happens in the two cases (i..e, `n=i++;` and `n=++i;`). Another potential problem that you have to consider when you design your loop is to avoid the definition of an *infinite loop*. This is the case when the conditional expression inside the loop is always true. See this very simple example on the use of a `for` loop:
 
@@ -221,6 +221,6 @@ Althought it is less frequently used, the `do-while` loop may be not completely 
 
 
 
-#### Level 5: arrays
+### Level 5: arrays
 
 ...
