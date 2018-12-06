@@ -89,7 +89,9 @@ The variable `num_byte` is declared and successively its value will be initialis
 
 
 
+#### Level 2
 
+To further increse your level you certanly need to learn how to use a very important and basic function. This is the `scanf`. The `scanf` is not always easy to use, you will understand later this, however, it represents the first tool you can use to allow an user interacting with your program. In particular, by using the `scanf` you can pass an *external* input to your program, reading the information needed using the keyboard.
 
 
 
