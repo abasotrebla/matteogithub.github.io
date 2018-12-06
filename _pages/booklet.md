@@ -87,6 +87,8 @@ int main() {
 
 The variable `num_byte` is declared and successively its value will be initialised with the result of the expression `sizeof(int)`. As a consequence, the block of memory that you call `num_byte` (which is 4 byte long) will store the (binary) representation of the corresponding number (4, in this case).
 
+It is really very important to do not confuse the symbol `=` with the symbol `==`. The first is intended to assign something to a variable, the second is intended to compare variables or expressions. If you use `=` when you wanted to use `==` you can not get an error and therefore you program will work but not as you would expect!
+
 
 
 #### Level 2
@@ -107,6 +109,14 @@ int main() {
 ```
 
 This very simple program takes as input two integers from the keyboard (base and height) and compute the area of a rectangle. The `scanf` is in some way similar to the `printf` since you still have to define the format (`%d` in this case as it is a decimal integer value). Note that you need to put the symbol `&` before the variable name. This symbol allows to refer to the *address* of the variable. This is important because you want to change the variable and since all arguments in C are passed to functions *by value* you need to pass the address of a variable if you want the function may change the content and not to work on a copy of the variable. We will go back to this point later in more details.
+
+
+
+#### Level 3 
+
+...
+
+
 
 
 
