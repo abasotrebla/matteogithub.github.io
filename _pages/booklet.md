@@ -172,9 +172,7 @@ Note that the expression `n % 2`, where `%` is called modulus operator, returns 
 
 #### Level 4: loop statements
 
-If you want to build even more powerful program, more clear and concise scripts, all you need is a *loop statement*. When you need to execute an instruction (or a block of instructions) several time you have to define a loop. The basic rule in this case is: *never write the same instruction twice*. The loop statement you will use more frequently is the **for**. In its more simple form, a for loop will look like this: `for(i=0;i<n;i++)` followed by an instruction or a block of instructions (in this case you need to define a block using `{}`). As you may have noticed this instruction contains three different fields (separated by a `;`). In the first field, the variable `i`, that needs to be declared somewhere, represents the variable that control the loop. The instruction `i=0` will be executed only the first time and allows to initialize this variable. Keep in mind the initializing is very important, and that a wrong assigniment in this case may strongly affect your program even if you do not get any error from the compiler. The second filed contains a conditional expression (`i<n`) that will be evaluated **before** to execute the instruction or the block. This is the reason why a for loop (as well as a `while` loop) may be never executed. If the expression is false the instrucion (or the block) will be skipped. The third field (`i++`), the increment of the control variable will be executed after all the instructions contained in the loop. The instruction `i++` is another way to write the expression `i=i+1`. When you use this compact form, you may need, in some specific case, to pay attention on the difference between `i++` and `++i`. This is not the case of a for loop, when the increment of `i` will be done after all the other instructions, but if the increment is inside an expression you may observe a different behaviour between the two different increments. Try to assign to another variable the result of the increment and see what happens in the two cases (i..e, `n=i++;` and `n=++i;`). Another potential problem that you have to consider when you design your loop is to avoid the definition of an *infinite loop*. This is the case when the conditional expression inside the loop is always true.
-
-See this very simple example on the use of a for loop:
+If you want to build even more powerful program, more clear and concise scripts, all you need is a *loop statement*. When you need to execute an instruction (or a block of instructions) several time you have to define a loop. The basic rule in this case is: *never write the same instruction twice*. The loop statement you will use more frequently is the **for**. In its more simple form, a `for` loop will look like this: `for(i=0;i<n;i++)` followed by an instruction or a block of instructions (in this case you need to define a block using `{}`). As you may have noticed this instruction contains three different fields (separated by a `;`). In the first field, the variable `i`, that needs to be declared somewhere, represents the variable that control the loop. The instruction `i=0` will be executed only the first time and allows to initialize this variable. Keep in mind the initializing is very important, and that a wrong assigniment in this case may strongly affect your program even if you do not get any error from the compiler. The second filed contains a conditional expression (`i<n`) that will be evaluated **before** to execute the instruction or the block. This is the reason why a `for` loop (as well as a `while` loop) may be never executed. If the expression is false the instrucion (or the block) will be skipped. The third field (`i++`), the increment of the control variable will be executed after all the instructions contained in the loop. The instruction `i++` is another way to write the expression `i=i+1`. When you use this compact form, you may need, in some specific case, to pay attention on the difference between `i++` and `++i`. This is not the case of a `for` loop, when the increment of `i` will be done after all the other instructions, but if the increment is inside an expression you may observe a different behaviour between the two different increments. Try to assign to another variable the result of the increment and see what happens in the two cases (i..e, `n=i++;` and `n=++i;`). Another potential problem that you have to consider when you design your loop is to avoid the definition of an *infinite loop*. This is the case when the conditional expression inside the loop is always true. See this very simple example on the use of a `for` loop:
 
 ```c
 #include <stdio.h>
@@ -195,3 +193,34 @@ int main() {
 ```
 
 In this simple example you have seen few new things. In particular, the sum of the numbers is expressed in compact form (`+=`) derived by combining two different operators. The instruction `sum+=num;` is eqauls to `sum=sum+num;`. Although, the first expression is more compact and in any case more commonly used, you need to pay attention that it makes less clear that the variable `sum` is also contained in the right side of the expression and therefore it is very important to initialize it before to use it. The other novelty is due to the use of the *cast* (`(float)sum`). Using this operator your are changing the type of the variable `sum`. This is important in this case beacuse, if you don't use it, the result of `sum` divided by `n` wil be and integer and it is not exactly what you would expect. Just try to remove the cast and see what the result looks like.
+
+As previously mentioned there is at least another very useful loop statement in C, the `while` loop. Most of the time you will experience that you can easly use these two different loops in a interchangeably way. My preference is to use the `for` when I have a priori knowledge on the number of iterations. One of the more evident differences is that after the keyword `while`, inside the `()` you have to only define the conditional expression. There is not formal initialisation of any variable of control and there is not a formal increment/decrement of this variable. This does not mean that you may just ignore this variable. Probably, all you need to do is to perform these steps in a different way. See the following example which is equivalent to one seen before in the case of the `for` loop:
+
+```C
+#include <stdio.h>
+int main() {
+  int i=1,n,num,sum=0;
+  float mean;
+
+  printf("How many integer you want to add? ");
+  scanf("%d",&n);
+  while(i<=n) {
+    printf("\nInteger #%d: ",i);
+    scanf("%d",&num);
+    sum+=num;
+    ++i;
+  }
+  mean=(float)sum/n;
+  printf("\nThe mean is equal to: %f\n",mean);
+}
+```
+
+The two program are equivalent. You may, in general, use a for or a while indifferently. 
+
+Althought it is less frequently used, the `do-while` loop may be not completely ignored. The only difference with the `while` is that the `do-while` allows to execute the instruction (or a block) at least one time. We will use this loop later in some exercise when necessary.
+
+
+
+#### Level 5: arrays
+
+...
