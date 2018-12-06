@@ -59,8 +59,14 @@ int number;
 With this instruction you are declaring a variable named `number` as an integer. What happens is that a block of memory will be reserved for this variable and that you can access to this block of memory using its name. How is this block long? Probably 4 byte, but just test it yourself:
 
 ```C
+#include <stdio.h>
+int main() {
+  int number;
 
+  printf("\nAn integer need %ld byte",sizeof(number));
+  printf("\nAn integer need %ld byte",sizeof(int));
+}
 ```
 
-
+As you can see, the `printf` may be used to print the result of an expression or the content of a variable. You just need to indicate where you want the result to appear using a specific format (`%ld` in  this case, which is for long integer) and report the expression (expressions) or the variable (variables) after the comma. 
 
