@@ -87,7 +87,7 @@ int main() {
 
 The variable `num_byte` is declared and successively its value will be initialised with the result of the expression `sizeof(int)`. As a consequence, the block of memory that you call `num_byte` (which is 4 byte long) will store the (binary) representation of the corresponding number (4, in this case).
 
-It is really very important to do not confuse the symbol `=` with the symbol `==`. The first is intended to assign something to a variable, the second is intended to compare variables or expressions. If you use `=` when you wanted to use `==` you can not get an error and therefore you program will work but not as you would expect!
+It is really very important to do not confuse the symbol `=` with the symbol `==`. The first is intended to assign something to a variable, the second is intended to compare variables or expressions. If you use `=` when you wanted to use `==` you can not get an error and therefore your program will work but not as you would expect!
 
 
 
