@@ -70,5 +70,26 @@ int main() {
 
 As you can see, the `printf` may be used to print the result of an expression or the content of a variable. You just need to indicate where you want the result to appear using a specific format (`%ld` in  this case, which is for long integer) and report the expression/s or the variable/s after the comma. The character `\n` represents a new line, so that the output maybe read more easly.
 
+Let's go back to declarations and types. There are few basic types that you can use without the need to define any new. The basic types are: `int`, `float`, `double` and `char`. The will have to choose the type depending on the context of the program. From this choice, it will depend both what you can do with your variables and the dimension of the block of memory reserved for your variable.
+
+To interact with your variables you may need to use the aritmetic operators (`+`, `-`, `* ` and `/`) to build some very simple expressions and to use the `=` symbol to assign a value to a variable as shown below:
+
+```C
+#include <stdio.h>
+int main() {
+  int number;
+  long int num_byte;
+
+  num_byte = sizeof(int);
+  printf("\nAn integer need %ld byte",num_byte);
+}
+```
+
+The variable `num_byte` is declared and successively its value will be initialised with the result of the expression `sizeof(int)`. As a consequence, the block of memory that you call `num_byte` (which is 4 byte long) will store the (binary) representation of the corresponding number (4, in this case).
+
+
+
+
+
 
 
