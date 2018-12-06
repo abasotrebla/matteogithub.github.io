@@ -194,3 +194,4 @@ int main() {
 }
 ```
 
+In this simple example you have seen few new things. In particular, the sum of the numbers is expressed in compact form (`+=`) derived by combining two different operators. The instruction `sum+=num;` is eqauls to `sum=sum+num;`. Although, the first expression is more compact and in any case more commonly used, you need to pay attention that it makes less clear that the variable `sum` is also contained in the right side of the expression and therefore it is very important to initialize it before to use it. The other novelty is due to the use of the *cast* (`(float)sum`). Using this operator your are changing the type of the variable `sum`. This is important in this case beacuse, if you don't use it, the result of `sum` divided by `n` wil be and integer and it is not exactly what you would expect. Just try to remove the cast and see what the result looks like.
