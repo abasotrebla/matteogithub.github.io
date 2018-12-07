@@ -251,5 +251,28 @@ int main() {
 
 The main difference with the previous example is that in this case, after the `for` loop you still have all your grades stored inside the array, each one in a specific and consecutive block of memory. Remeber that as programmer it is you that need to desing your array to store a sufficient number of elements. If 10 is not enough, just change the value into the `#define`, so you do not need to change your code in any other place. 
 
-Remember that you can not assign an array to another array using this instruction: `v=w;`. The name of an array is a constant pointer, meaning that `v` store the address of the first element of the array: `v=&v[0]`, and you can not make `v` points to another memory address. If you need to copy and array into another array, you have to copy every single element at time (therefore acting with the index into a loop).
+Remember that you can not assign an array to another array using this instruction: `v=w;`. The name of an array is a *constant pointer*, meaning that `v` stores the address of the first element of the array: `v=&v[0]`and you can not make `v` points to another memory address. If you need to copy and array into another array, you have to copy every single element at time (therefore acting with the index into a loop).
+
+To have a good control of the dimension of your array it is a good practice to test that it will not go to accept more elements of its capacity. See this example:
+
+```c
+#include <stdio.h>
+#define N 10
+int main() {
+  int i,n,v[N],sum=0;
+
+  do  {
+    printf("Dimension? ");
+    printf("It must be in the range 1-10!");
+    scanf("%d",&n);
+  } while(n<1 || n>N);
+
+  for(i=0;i<n;++i) {
+    printf("\nType the integer #%d: ",i+1);
+    scanf("%d",&v[i]);
+    sum+=v[i];
+    }
+  printf("\nThe sum is: %d\n",sum);
+}
+```
 
