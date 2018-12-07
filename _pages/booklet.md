@@ -225,4 +225,27 @@ Althought it is less frequently used, the `do-while` loop may be not completely 
 
 ### Level 5: arrays
 
-...
+Now things will start to be more interesting. Arrays are very powerful tool. If you need to manage a set of homogenous variables (all of the same type) you may not need to declare them separately. As for every other variable, an array is first declared: `int v[100];`. This declaration define a monodimensional array, named `v`  where each element has the same name and the same type `int`. Between `[]` you have defined its dimension. This means that 100 blocks of memory of the same dimension (4 byte) will be reserved for your variable `v`. It is very important to remeber that these blocks are physically adjacent. Therefore, if you know the address of the first element, you can easly access to all the other elements just moving to the next block. To select the element you want just use an index as follows: `v[5]` (which represents the element of index 5). Remember that the first element of an array has index `zero` (i.e., `v[0]` is your first element). As a consequence, if your array has 100 elements, the last one has index equals to 99 (i.e., `v[99]` is your last element). Pay extra attention to do not try to access elements outside the range (`0`-`N-1` if N is the dimension of your array)! Your compilar may not give you any error, but this is a very dangerous situation since you have not any control on the content of the next memory content. Also try to avoid using fixed number for the dimension. It is preferable to use a `#define N 100` that can be more easly changed later if you need to increase the size of your array. 
+
+See this very simple example on the usage of an array:
+
+```c
+#include <stdio.h>
+#define NGRADE 10
+int main() {
+  int i,n,grade[NGRADE],sum=0;
+  float mean;
+
+  printf("How many grades you want to insert? ");
+  scanf("%d",&n);
+  for(i=0;i<n;++i) {
+    printf("\nInsert grade #%d: ",i+1);
+    scanf("%d",&grade[i]);
+    sum+=grade[i];
+    }
+  mean=(float)sum/n;
+  printf("\nThe mean is eqaul to: %f\n",mean);
+}
+
+```
+
