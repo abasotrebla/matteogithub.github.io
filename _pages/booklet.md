@@ -374,7 +374,7 @@ int main() {
 
 ```
 
-Despite the code will work and the results will be fine, you can understand that the two `for` loops will be executed even when the array is already ordered. There are several approaches that can be used to optimize this code that out of the scope of this course.
+As you can see, to order the array two `for` loops have been used. The innermost loop compare every single element of the array with the following, if the first is greater than the code swap them, otherwise it goes to the next element. Since the loop will access the last element using the index `j+1` you have to pay attention to do not access to elements outside the array, so the condition inside the loop is se to `j<n-1`. If you are lucky (your array is not too messy), it is enought and you get your array properly ordered.  But you are not sure this is the case, so to be sure that the array will be ordered (irrespectively of its initial order) you need to use another loop, the outermost one. Despite the code will work and the results will be fine, you can understand that the two `for` loops will be completely executed even when the array is already ordered. There are several approaches that can be used to optimize this code, thus avoiding to go on with further iterations when it is not necessary, that they are out of the scope of this course.
 
 [In progress: bidimensional arrays and strings]
 
