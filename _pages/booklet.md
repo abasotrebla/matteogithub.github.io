@@ -314,7 +314,6 @@ As you can see, in order to compute the min (max) of the elements stored into an
 Now let's see how to search for a specific value inside an array of integers.
 
 ```C
-//ricerca
 #include <stdio.h>
 #define DIM 100
 int main() {
