@@ -25,7 +25,6 @@ Now that your system is ready to work just try a very simple program. All you ne
 ```c
 //My first program
 #include <stdio.h>
-
 int main() {
   printf("Hello world");
   return 0;
