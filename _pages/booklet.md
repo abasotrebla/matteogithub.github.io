@@ -311,7 +311,7 @@ int main() {
 
 As you can see, in order to compute the min (max) of the elements stored into an array you can start assuming that its first element is indeed the min (max). After that you scan all the elements and if you find an element minor (greater) of min (max) then min (max) will be changed with the value of the current element. 
 
-Now let's see how to search for a specific value inside an array of integers.
+Now let's see how to *search for* a specific value inside an array of integers.
 
 ```C
 #include <stdio.h>
