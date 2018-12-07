@@ -338,3 +338,4 @@ int main() {
 }
 ```
 
+After the array is loaded, the user enter an integer (`elem`) to be found in the array. In this case the problem is solved using a `while` loop (note the use of the variable `i`, initialized outside the loop and incremented insed the loop). The condition that will be tested before to execute the instruction of the loop (i.e., `++i`) is about to check if `elem` was found and that you still have elements of the array to scan (avoiding to match `elem` with blocks of memory outside the array `v`). Therefore, you can go out from the loop when you have found the integer or when you have verified all the elements of your array, but you still do not know. You have to check what is the reason that let your program to exit from the loop: `if(elem==v[i])`. If the condition is true it means you have indeed found `elem` int the array, otherwise you have not.
