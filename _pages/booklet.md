@@ -310,3 +310,31 @@ int main() {
 ```
 
 As you can see, in order to compute the min (max) of the elements stored into an array you can start assuming that its first element is indeed the min (max). After that you scan all the elements and if you find an element minor (greater) of min (max) then min (max) will be changed with the value of the current element. 
+
+Now let's see how to search for a specific value inside an array of integers.
+
+```C
+//ricerca
+#include <stdio.h>
+#define DIM 100
+int main() {
+    int v[DIM], n, i, elem;
+
+    do  {
+      printf("Dimension of the array: \n");
+      scanf("%d", &n);
+    } while(n<1 || n>DIM);
+
+    for(i=0;i<n;i++)  {
+        printf("Type element of index - %d : ",i);
+        scanf("%d",&v[i]);
+    }
+    printf("\nType the integer you want to search: ");
+    scanf("%d",&elem);
+    i=0;
+    while(elem!=v[i] && i<n) ++i;
+    if(elem==v[i]) printf("Element found in position %d\n",i);
+    else printf("Element not found!\n");
+}
+```
+
