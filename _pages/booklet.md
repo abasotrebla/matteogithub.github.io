@@ -338,3 +338,81 @@ int main() {
 ```
 
 After the array is loaded, the user enter an integer (`elem`) to be found in the array. In this case the problem is solved using a `while` loop (note the use of the variable `i`, initialized outside the loop and incremented insed the loop). The condition that will be tested before to execute the instruction of the loop (i.e., `++i`) is about to check if `elem` was found and that you still have elements of the array to scan (avoiding to match `elem` with blocks of memory outside the array `v`). Therefore, you can go out from the loop when you have found the integer or when you have verified all the elements of your array, but you still do not know. You have to check what is the reason that let your program to exit from the loop: `if(elem==v[i])`. If the condition is true it means you have indeed found `elem` int the array, otherwise you have not.
+
+In the following example you will see how *to order* the elements array in ascending order. The proposed solution is very simple and intuitive, however it does not represent an optimal way to solve the problem as we will breafly discuss. 
+
+```C
+#include <stdio.h>
+#define DIM 100
+int main() {
+    int v[DIM], n, i, j, tmp;
+
+    do  {
+      printf("Dimension of the array: \n");
+      scanf("%d", &n);
+    } while(n<1 || n>DIM);
+    for(i=0;i<n;i++)  {
+        printf("Type element of index - %d: ",i);
+        scanf("%d",&v[i]);
+    }
+    //start ordering
+    for(i=0; i<n-1; i++)  {
+        for(j=0; j<n-1; j++) {
+            if(v[j] > v[j+1]) {
+                tmp = v[j];
+                v[j] = v[j+1];
+                v[j+1] = tmp;
+            }
+        }
+    }
+    //ordering finished
+
+    printf("\nYour ordered array:\n");
+    for(i=0; i<n; i++)
+        printf("%d  ", v[i]);
+}
+
+```
+
+Despite the code will work and the results will be fine, you can understand that the two `for` loops will be executed even when the array is already ordered. There are several approaches that can be used to optimize this code that out of the scope of this course.
+
+[In progress: bidimensional arrays and strings]
+
+
+
+### Level 6: structures
+
+...
+
+
+
+
+
+### Level 7: pointers
+
+...
+
+
+
+
+
+### Level 8: functions
+
+...
+
+
+
+
+
+### Level 9: file
+
+...
+
+
+
+
+
+### Level 10: memory managment and lists
+
+...
+
