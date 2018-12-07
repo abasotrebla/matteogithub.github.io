@@ -415,4 +415,3 @@ Despite the code will work and the results will be fine, you can understand that
 ### Level 10: memory managment and lists
 
 ...
-
