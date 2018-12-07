@@ -276,3 +276,37 @@ int main() {
 }
 ```
 
+Let's see some more example on the use of arrays. The next is about to store N grades in an array and evaluate the mean, the max and the min grades.
+
+```C
+#include <stdio.h>
+#define NGRADES 10
+
+int main() {
+  int i,n,grades[NGRADES],sum=0,min,max;
+  float mean;
+
+  do  {
+    printf("How many grades? ");
+    scanf("%d",&n);
+  } while(n<1 || n>NGRADES);
+
+  for(i=0;i<n;++i)  {
+    printf("\nType grade #%d: ",i+1);
+    scanf("%d",&grades[i]);
+    sum+=grades[i];
+    }
+  mean=(float)sum/n;
+  printf("\nThe mean is: %.1f\n",mean);
+
+  min=grades[0];
+  max=grades[0];
+  for(i=0;i<n;++i) {
+    if(grades[i]<min) min=grades[i];
+    if(grades[i]>max) max=grades[i];
+  }
+  printf("\nThe max grade is: %d\n",max);
+  printf("\nThe min grade is: %d\n",min);
+}
+```
+
