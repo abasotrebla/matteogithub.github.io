@@ -281,7 +281,6 @@ Let's see some more example on the use of arrays. The next is about to store N g
 ```C
 #include <stdio.h>
 #define NGRADES 10
-
 int main() {
   int i,n,grades[NGRADES],sum=0,min,max;
   float mean;
@@ -310,3 +309,4 @@ int main() {
 }
 ```
 
+As you can see, in order to compute the min (max) of the elements stored into an array you can start assuming that its first element is indeed the min (max). After that you scan all the elements and if you find an element minor (greater) of min (max) then min (max) will be changed with the value of the current element. 
