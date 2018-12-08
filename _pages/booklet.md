@@ -6,9 +6,9 @@
 
 ### Introduction
 
-Dear student, this document is for you. I know that attending the lectures may be sometime hard, sometime boring and even when it is not, there are several other reasons that make it difficult to go back home and study what you have listened.
+Dear student, this document is for you. I know that attending the lectures may be sometimes hard, sometimes boring and even when it is not, there are several other reasons that make it difficult to go back home and study what you have listened.
 
-Here you find the most significant concepts that I have discussed during the classes, with a summary and a description of what I think it is more important for you, the *take home* messagge. At the following link https://matteogithub.github.io/teaching/ you find all the slides (in PDF and md format) and the *.c* file of the scripts included.
+Here you find the most significant concepts that I have discussed during the classes, with a summary and a description of what I think it is more important for you, the *take-home* message. At the following link https://matteogithub.github.io/teaching/ you find all the slides (in PDF and md format) and the *.c* file of the scripts included.
 
 This is, obviously, an ongoing work and can not replace a book and can not be enought if you do not spent time *playing* with the code. Learning to code is not merely learning the *syntax* of a specific language. It means much more, creativity, logical thinking and determination are extremely important in this context. 
 
