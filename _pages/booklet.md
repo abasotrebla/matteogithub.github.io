@@ -31,7 +31,7 @@ int main() {
 }
 ```
 
-Now you need to compile and run the program. This program should work correctly. You should not have any error or warning. What does this mean? This mean that you should see a *terminal* window pop-up and the sentence "*Hello world*" appear. If this happened, well, that's great. You have wrote your first program. 
+Now you need to compile and run the program. This program should work correctly. You should not have any error or warning. What does this mean? This means that you should see a *terminal* window pop-up and the sentence "*Hello world*" appear. If this happened, well, that's great. You have wrote your first program. 
 
 Before to go on with something more complex and interesting, just try to understand what you have just written in your file. I am quite confident that it is very important to understand the structure of a C program. This is especially easy to understand now, when the progam is short. 
 
