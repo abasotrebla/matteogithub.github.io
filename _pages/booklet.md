@@ -67,11 +67,11 @@ int main() {
 }
 ```
 
-As you can see, the `printf` may be used to print the result of an expression or the content of a variable. You just need to indicate where you want the result to appear using a specific format (`%ld` in  this case, which is for long integer) and report the expression/s or the variable/s after the comma. The character `\n` represents a new line, so that the output in the terminal may be read more easly.
+As you can see, the `printf` may be used to print the result of an expression or the content of a variable. You just need to indicate where you want the result to appear using a specific format (`%ld` in this case, which is for long integer) and report the expression/s or the variable/s after the comma. The character `\n` represents a new line, so that the output in the terminal may be read more easily.
 
-Let's go back to declarations and types. There are few basic types that you can use without the need to define any new (as you will learn to do later). The basic types are: `int`, `float`, `double` and `char`. You will have to choose the type of a variable depending on the context of the program. From this choice, it will depend both what you can do with your variable and the dimension of the block of memory reserved for this variable.
+Let's go back to declarations and types. There are few basic types that you can use without the need to define any new (as you will learn to do later). The basic types are: `int`, `float`, `double` and `char`. You will have to choose the type of a variable depending on the context of the program. From this choice, it will depend on both what you can do with your variable and the dimension of the block of memory reserved for this variable.
 
-To interact with your variables you may need to use the aritmetic operators (`+`, `-`, `* ` and `/`) to build some very simple expressions and to use the `=` symbol to assign a value to a variable as shown below:
+To interact with your variables you may need to use the arithmetic operators (`+`, `-`, `* ` and `/`) to build some very simple expressions and to use the `=` symbol to assign a value to a variable as shown below:
 
 ```C
 #include <stdio.h>
