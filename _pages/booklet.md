@@ -216,9 +216,9 @@ int main() {
 }
 ```
 
-The two program are equivalent. You may, in general, use a `for` or a `while` indifferently. 
+The two programs are equivalent. You may, in general, use a `for` or a `while` indifferently. 
 
-Althought it is less frequently used, the `do-while` loop may be not completely ignored. The only difference with the `while` is that the `do-while` allows to execute the instruction (or a block) at least one time. We will use this loop later in some exercise when necessary.
+Although it is less frequently used, the `do-while` loop may be not completely ignored. The only difference with the `while` is that the `do-while` allows executing the instruction (or a block) at least one time. We will use this loop later in some exercise when necessary.
 
 
 
