@@ -129,7 +129,7 @@ int main() {
 }
 ```
 
-It is important to keep in mind that in C any **non-zero** values is interpreted as **true** (**false** if it is **zero**). *Relational* and *logical* operators may be used to build more complex expressions, see this example:
+It is important to keep in mind that in C any **non-zero** value is interpreted as **true** (**false** if it is **zero**). *Relational* and *logical* operators may be used to build more complex expressions, see this example:
 
 ```c
 #include <stdio.h> 
@@ -144,7 +144,7 @@ int main() {
 }
 ```
 
-Another commonly used *flow control statement* is the `switch-case`. This statement allows to select a specific block of instructions based on the value (`int` or `char`) assumed by a variable or by an expression tested for equality against a list of constant values. See the following example:
+Another commonly used *flow control statement* is the `switch-case`. This statement allows selecting a specific block of instructions based on the value (`int` or `char`) assumed by a variable or by an expression tested for equality against a list of constant values. See the following example:
 
 ```c
 #include <stdio.h>
