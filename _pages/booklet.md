@@ -31,17 +31,17 @@ int main() {
 }
 ```
 
-Now you need to compile and run the program. This program should work correctly. You should not have any error or warning. What does this mean? This means that you should see a *terminal* window pop-up and the sentence "*Hello world*" appear. If this happened, well, that's great. You have wrote your first program. 
+Now you need to compile and run the program. This program should work correctly. You should not have any error or warning. What does this mean? This means that you should see a *terminal* window pop-up and the sentence "*Hello world*" appear. If this happened, well, that's great. You have written your first program. 
 
-Before to go on with something more complex and interesting, just try to understand what you have just written in your file. I am quite confident that it is very important to understand the structure of a C program. This is especially easy to understand now, when the progam is short. 
+Before to go on with something more complex and interesting, just try to understand what you have just written in your file. I am quite confident that it is very important to understand the structure of a C program. This is especially easy to understand now when the program is short. 
 
 The line `//My first program`is a comment. This is just ignored by the compiler. However, using comments into your script is really useful. You should add more comments you can. It will be of great help when you (or others) will open your file days later.
 
-The line `#include <stdio.h>` includes an external library to your program. A library allows you to use a set of functionalities that you do not need to re-implement by yourself. In this specific case the `stdio.h` (standard input and output) library gives you the possibility to use the `printf` function. When it will be necessary, I will show you other interesting libraries that you can easely include in your code.
+The line `#include <stdio.h>` includes an external library to your program. A library allows you to use a set of functionalities that you do not need to re-implement by yourself. In this specific case the `stdio.h` (standard input and output) library gives you the possibility to use the `printf` function. When it will be necessary, I will show you other interesting libraries that you can easily include in your code.
 
 Every C program has a main function. This function is called `main`. Your program will start from here, always from here. You will learn more about functions later. All you need to know right now is that this function will contain the instructions (but not only) that your program will perform and that this function (in this case) will return an integer (see the `int` just before the name of the function). Your `main` function has a name, has a `int` value that is expected to return and has a *body*. The body is delimited by the braces `{}`. 
 
-The last instruction of the function is `return 0;`. This is the value your function in returning. If you omit to include this instruction your program will work as well, but you will discover later that this is not an aesthetic point.
+The last instruction of the function is `return 0;`. This is the value your function returns. If you omit to include this instruction your program will work as well, but you will discover later that this is not an aesthetic point.
 
 
 
