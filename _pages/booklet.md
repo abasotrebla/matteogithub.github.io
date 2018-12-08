@@ -248,9 +248,9 @@ int main() {
 
 ```
 
-The main difference with the previous example is that in this case, after the `for` loop you still have all the grades stored inside the array, each one in a specific and consecutive block of memory. Remeber that as programmer it is you that need to *desing* your array to store a sufficient number of elements. If 10 is not enough, just change the value into the `#define`, so you do not need to change your code in any other place. 
+The main difference with the previous example is that in this case, after the `for` loop you still have all the grades stored inside the array, each one in a specific and consecutive block of memory. Remember that as a programmer it is you that need to *design* your array to store a sufficient number of elements. If 10 is not enough, just change the value into the `#define`, so you do not need to change your code in any other place. 
 
-Remember that you can not assign an array to another array using this instruction: `v=w;`. The name of an array is a *constant pointer*, meaning that `v` stores the address of the first element of the array: `v=&v[0]`and you can not make `v` points to another memory address. If you need to copy and array into another array, you have to copy every single element at time (therefore acting with an index into a loop).
+Remember that you can not assign an array to another array using this instruction: `v=w;`. The name of an array is a *constant pointer*, meaning that `v` stores the address of the first element of the array: `v=&v[0]` and you cannot make `v` points to another memory address. If you need to copy an array into another array, you have to copy every single element at a time (therefore acting with an index into a loop).
 
 To have a good control of the dimension of your array it is a good practice to test that it will not go to accept more elements of its capacity. See this example:
 
@@ -275,7 +275,7 @@ int main() {
 }
 ```
 
-Let's see some more examples on the use of arrays. The next asks to store N grades in an array and evaluate the mean, the max and the min grade.
+Let's see some more examples on the use of arrays. The next asks to store N grades in an array and evaluate the mean, the max, and the min grade.
 
 ```C
 #include <stdio.h>
