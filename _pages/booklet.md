@@ -308,9 +308,9 @@ int main() {
 }
 ```
 
-As you can see, in order to compute the min (max) of the elements stored into an array you can start assuming that its first element is indeed the min (max). After that, you scan all the elements and if you find an element minor (greater) of min (max) then min (max) will be changed with the value of the current element. 
+As you can see, in order to compute the min (max) of the elements stored in an array you can start assuming that its first element is indeed the min (max). After that, you scan all the elements and if you find an element minor (greater) of min (max) than min (max) will be changed to the value of the current element. 
 
-Now let's see how to *search for* a specific value inside an array of integers.
+Now let's see how to *search for* a specific value in an array of integers.
 
 ```C
 #include <stdio.h>
@@ -336,9 +336,9 @@ int main() {
 }
 ```
 
-After the array is loaded, the user enters an integer (`elem`) to be found in the array. In this case the problem is solved using a `while` loop (note the use of the variable `i`, initialized outside the loop and later incremented insed the loop). The condition (`elem!=v[i] && i<n`) that is tested before to execute the instruction of the loop ( `++i`) is about to check if `elem` was found and that you still have elements to scan on the array (avoiding to match `elem` with blocks of memory outside the array `v`). Therefore, you can go out from the loop when you have found the integer or alternatively, when you have verified all the elements of your array. Anyway, you still do not know, so you need to check what is the reason that let your program go out from the `while` loop. Try with `if(elem==v[i])`,  if this condition is true it means you have indeed found `elem` inside the array, otherwise you have not.
+After the array is loaded, the user enters an integer (`elem`) to be found in the array. In this case, the problem is solved using a `while` loop (note the use of the variable `i`, initialized outside the loop and later incremented inside the loop). The condition (`elem!=v[i] && i<n`) that is tested before to execute the instruction of the loop ( `++i`) is about to check if `elem` was found and that you still have elements to scan on the array (avoiding to match `elem` with blocks of memory outside the array `v`). Therefore, you can go out from the loop when you have found the integer or alternatively when you have verified all the elements of your array. Anyway, you still do not know, so you need to check what is the reason that let your program go out from the `while` loop. Try with `if(elem==v[i])`,  if this condition is true it means you have indeed found `elem` inside the array, otherwise you have not.
 
-In the following example you will see how *to order* the elements of an array in ascending order. The proposed solution is very simple and intuitive, however it does not represent an optimal way to solve the problem as we will breafly discuss later. 
+In the following example, you will see how *to order* the elements of an array in ascending order. The proposed solution is very simple and intuitive, however, it does not represent an optimal way to solve the problem as we will briefly discuss later. 
 
 ```C
 #include <stdio.h>
@@ -373,7 +373,7 @@ int main() {
 
 ```
 
-As you can see, two `for` loops have been used to order the array. The innermost loop compares every single element of the array with the following, if the first is greater you swap them, otherwise you go to test the next element. Since the innermost loop will access the last element using the index `j+1` you have to pay attention to do not access to elements outside the array, so the condition inside the loop is se to `j<n-1`. If you are lucky (your array is not too messy), it is enought and you get your array properly ordered.  But you are not sure this is the case, so to be sure that the array will be finally ordered (irrespectively of its initial order) you need to use another loop, the outermost one. Despite the code will work and the result will be fine, you can understand that the two `for` loops will be executed even if the array is already ordered. There are several approaches (out of the scope of this course) that can be used to optimize this code, thus avoiding to go on with further iterations when this is not necessary.
+As you can see, two `for` loops have been used to order the array. The innermost loop compares every single element of the array with the following, if the first is greater you swap them, otherwise, you go to test the next element. Since the innermost loop will access the last element using the index `j+1` you have to pay attention to do not access to elements outside the array, so the condition inside the loop is set to `j<n-1`. If you are lucky (your array is not too messy), it is enough and you get your array properly ordered.  But you are not sure this is the case, so to be sure that the array will be finally ordered (irrespectively of its initial order) you need to use another loop, the outermost one. Despite the code will work and the result will be fine, you can understand that the two `for` loops will be executed even if the array is already ordered. There are several approaches (out of the scope of this course) that can be used to optimize this code, thus avoiding to go on with further iterations when this is not necessary.
 
 [In progress: bidimensional arrays and strings]
 
