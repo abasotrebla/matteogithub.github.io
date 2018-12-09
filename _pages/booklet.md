@@ -554,7 +554,7 @@ int main() {
 
 ### Level 7: pointers
 
-...
+Pointers in C are everywhere and may be used for almost everything. *Pointers are variables that can store the address of another variable*. As you will see, pointers are used to access and to interact with arrays, to change the content of variables when they are passed to functions, to use files, to manage dynamic memory allocation and to cope with linked lists. To use a pointer you need to declare it as follows: `int *my_pointer;`. The declaration contains a name to be assigned to the pointer where the name comes after the symbol `*`. Furthermore, with the declaration, you have to specify the type of the variable pointed. There are no restrictions to the type of variables that you may need to point. 
 
 
 
