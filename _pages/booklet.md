@@ -454,6 +454,46 @@ int main() {
 
 As you can see, with the `fgets` you have control over the dimension of the string. The field with `stdin` is to specify that the input will be from the standard input (the keyboard). You will see later that the `fgets` can be used to read data from *file*.
 
+You have just seen that structures can contain arrays, furthermore you can also have arrays of structures and structures that contain structures as shown in the following examples:
+
+```C
+#include <stdio.h>
+#define DIM_NAME 20
+#define DIM_STUD 100
+struct student {
+        int ID_number;
+        char name[DIM_NAME];
+        char surname[DIM_NAME];
+    };
+
+int main() {
+    struct student students[DIM_STUD];
+    int n_students;
+
+    printf("\nHow many students? ");
+    scanf("%d",&n_students);
+    printf("\nAdd students\n");
+    for(int i=0;i<n_students;++i) {
+        printf("\nStudent - %d: ", i+1);
+        printf("\nName: ");
+        scanf("%s",students[i].name);
+        printf("Surname: ");
+        scanf("%s",students[i].surname);
+        printf("ID: ");
+        scanf("%d",&students[i].ID_number);
+    }
+    printf("\n\nStudents:\n");
+    for(int i=0;i<n_students;++i) {
+        printf("%s %s - ID: %d\n",students[i].name,students[i].surname,students[i].ID_number);
+    }
+}
+
+```
+
+```C
+
+```
+
 
 
 
