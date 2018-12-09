@@ -381,7 +381,78 @@ As you can see, two `for` loops have been used to order the array. The innermost
 
 ### Level 6: structures
 
-...
+Arrays are sets of homogenous elements (all the elements are of the same type). With the *structures* you can define a completely new and personalized type. The variables declared of this type may have several components, each of specific and different type. Here's a very simple example of structure *definition* and *declaration*.
+
+```C
+struct student {
+        int ID_number;
+        char name[DIM_NAME];
+        char surname[DIM_NAME];
+    };
+
+    struct student my_student;
+```
+
+You can access the components in this as follow: `my_student.ID_number`, `my_student.name` and `my_student.surname`.
+
+To load data into the variable `my_student` see this code:
+
+```C
+#include <stdio.h>
+#define DIM_NAME 20
+
+struct student {
+        int ID_number;
+        char name[DIM_NAME];
+        char surname[DIM_NAME];
+    };
+
+int main() {
+    struct student my_student;
+
+    printf("\nName: ");
+    scanf("%s",my_student.name);
+    printf("\nSurname: ");
+    scanf("%s",my_student.surname);
+    printf("\nID: ");
+    scanf("%d",&my_student.ID_number);
+    printf("\n\nStudent data: ");
+    printf("%s %s with ID %d\n",my_student.name,my_student.surname,my_student.ID_number);
+}
+
+```
+
+Note that when you use the `scanf` for a string you do not need to use the symbol `&`. This is because `scanf` expect the address of a variable, but the name of a string is the pointer to the first element of the array of characters so it is not necessary to specify the address using the symbol `&` as you do for any other variable. 
+
+Anyway, it is better do not use `scanf` for strings at all. This is because `scanf` does not explicitly allow to check for the dimension of the string and because it may not work as you expect. If you type a *space* your input will be interrupted. The best solution to input strings is by using the function `fgets`. See the new version of the last code:
+
+```C
+#include <stdio.h>
+#define DIM_NAME 20
+
+struct student {
+        int ID_number;
+        char name[DIM_NAME];
+        char surname[DIM_NAME];
+    };
+
+int main() {
+    struct student my_student;
+
+    printf("\nName: ");
+    fgets(my_student.name, DIM_NAME, stdin);
+    printf("\nSurname: ");
+    fgets(my_student.surname, DIM_NAME, stdin);
+    printf("\nID: ");
+    scanf("%d",&my_student.ID_number);
+
+    printf("\n\nStudent data: ");
+    printf("%s %s with ID %d\n",my_student.name,my_student.surname,my_student.ID_number);
+}
+
+```
+
+As you can see, with the `fgets` you have control over the dimension of the string. The field with `stdin` is to specify that the input will be from the standard input (the keyboard). You will see later that the `fgets` can be used to read data from *file*.
 
 
 
