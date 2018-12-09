@@ -601,11 +601,39 @@ int main() {
 
 With the instruction `my_pointer=&my_student;` you create a link between the pointer ``my_pointer` and the variable `my_student`. As a consequence, you can use the pointer to add the information inside the components of the structure. To check if this is indeed the case just try to print the structure using the classic formalism.
 
-The pointers represent the more important ingredient for the linked lists. Even in their more simple form, when you do not use the dynamic allocation of memory, linked list are essentially organized by using pointers. **Pointers in the linked lists are essential**. There are three main points that make the use of pointers in linked lists so important.
+The pointers represent the more important ingredient for the linked lists. Even in their more simple form, when you do not use the dynamic allocation of memory, linked list are essentially organized by using pointers. **Pointers in the linked lists are essential**. There are three main reasons that make the use of pointers in linked lists so important.
 
 1. Differently from arrays, the elements of a linked list are not stored in adjacent blocks of memory, so the only way to know where the next element is located is to store its address in the previous element. As a consequence, every single element of a linked list must contain a pointer to a variable of the same type.
 2. Your linked list, if all the elements are correctly linked, is identified by a pointer to its first element. You need to do not lose this pointer, otherwise, you will not have your list anymore.
 3. If you want to access all the elements of the linked list you have to clearly detect the last element. So, you need to remember to make the pointer included in the last element of the list points to the **NULL** pointer. 
+
+Here an example of linked list with static allocation (all the elements of the list must be declared).
+
+```c
+#include <stdio.h>
+    struct list {
+        int num;
+        struct list *next;
+    };
+int main() {
+    struct list val1,val2,val3;
+    struct list *punt_list;
+
+    val1.num=10;
+    val1.next=&val2;
+    val2.num=20;
+    val2.next=&val3;
+    val3.num=30;
+    val3.next=NULL;
+    punt_list=&val1;
+    while(punt_list != NULL) {
+      printf("%d ",punt_list->num);
+      punt_list=punt_list->next;
+    }
+}
+```
+
+Despite the example is easy, you can observe the presence of all the previous points in this code.
 
 
 
