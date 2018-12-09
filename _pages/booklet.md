@@ -454,7 +454,7 @@ int main() {
 
 As you can see, with the `fgets` you have control over the dimension of the string. The field with `stdin` is to specify that the input will be from the standard input (the keyboard). You will see later that the `fgets` can be used to read data from *file*.
 
-You have just seen that structures can contain arrays, furthermore you can also have arrays of structures and structures that contain structures as shown in the following examples:
+You have just seen that structures can contain arrays, furthermore, you can also have arrays of structures and structures that contain structures as shown in the following examples:
 
 ```C
 #include <stdio.h>
