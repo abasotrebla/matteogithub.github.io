@@ -460,6 +460,7 @@ You have just seen that structures can contain arrays, furthermore you can also 
 #include <stdio.h>
 #define DIM_NAME 20
 #define DIM_STUD 100
+
 struct student {
         int ID_number;
         char name[DIM_NAME];
@@ -469,6 +470,7 @@ struct student {
 int main() {
     struct student students[DIM_STUD];
     int n_students;
+    char enter;
 
     printf("\nHow many students? ");
     scanf("%d",&n_students);
@@ -476,22 +478,72 @@ int main() {
     for(int i=0;i<n_students;++i) {
         printf("\nStudent - %d: ", i+1);
         printf("\nName: ");
-        scanf("%s",students[i].name);
+        scanf("%c",&enter);
+        fgets(students[i].name, DIM_NAME, stdin);
         printf("Surname: ");
-        scanf("%s",students[i].surname);
+        fgets(students[i].surname, DIM_NAME, stdin);
         printf("ID: ");
         scanf("%d",&students[i].ID_number);
     }
+
     printf("\n\nStudents:\n");
     for(int i=0;i<n_students;++i) {
         printf("%s %s - ID: %d\n",students[i].name,students[i].surname,students[i].ID_number);
     }
 }
-
 ```
 
 ```C
+#include <stdio.h>
+#define DIM_NAME 50
+#define DIM_STUD 1000
+#define DIM_COURSE 50
 
+struct course {
+    int grade;
+    char name[DIM_NAME];
+};
+
+struct std {
+    char name[DIM_NAME];
+    char surname[DIM_NAME];
+    struct course esame[DIM_COURSE];
+};
+
+int main() {
+    struct std students[DIM_STUD];
+    int n_students,n_ex,sum[DIM_STUD]={0};
+    float mean[DIM_STUD]={0};
+    char enter;
+
+    printf("How many students? ");
+    scanf("%d",&n_students);
+    scanf("%c",&enter);
+    for(int i=0;i<n_students;++i) {
+        printf("Student - %d", i+1);
+        printf(" Name: ");
+        fgets(students[i].name, DIM_NAME, stdin);
+        printf("Surname: ");
+        fgets(students[i].surname, DIM_NAME, stdin);
+        printf("How many exams: ");
+        scanf("%d",&n_ex);
+        scanf("%c",&enter);
+        for(int j=0;j<n_ex;++j) {
+            printf("Exam - %d",j+1);
+            printf(" Name exam: ");
+            fgets(students[i].esame[j].name, DIM_NAME, stdin);
+            printf("Grade: ");
+            scanf("%d",&students[i].esame[j].grade);
+            scanf("%c",&enter);
+            sum[i]+=students[i].esame[j].grade;
+        }
+        mean[i]=(float)sum[i]/n_ex;
+    }
+    printf("\n\nList of students\n");
+    for(int i=0;i<n_students;++i) {
+        printf("%s %s - mean: %.1f\n",students[i].name,students[i].surname,mean[i]);
+    }
+}
 ```
 
 
