@@ -1,3 +1,5 @@
+
+
 # A brief booklet for my C course
 
 ##### by Matteo Fraschini
@@ -492,6 +494,8 @@ int main() {
     }
 }
 ```
+
+Note the usage of `scanf("%c",&enter);` that allows ignoring the character `\n` (in the buffer after the user inserts the number of students and later the student ID) as input in the following `fgets` call.  
 
 ```C
 #include <stdio.h>
