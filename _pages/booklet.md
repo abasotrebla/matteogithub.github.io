@@ -556,7 +556,22 @@ int main() {
 
 Pointers in C are everywhere and may be used for almost everything. *Pointers are variables that can store the address of another variable*. As you will see, pointers are used to access and to interact with arrays, to change the content of variables when they are passed to functions, to use files, to manage dynamic memory allocation and to cope with linked lists. To use a pointer you need to declare it as follows: `int *my_pointer;`. The declaration contains a name to be assigned to the pointer where the name comes after the symbol `*`. Furthermore, with the declaration, you have to specify the type of the variable pointed. There are no restrictions to the type of variables that you may need to point. 
 
+Let's see ho to use pointers:
 
+```C
+#include <stdio.h>
+int main() {
+  int n=10;
+  int *p;
+
+  p=&n;
+  printf("%d %d",n,*p);
+}
+```
+
+In this example you see the pointer declaration `int *p;` and successively the pointer initialization `p=&n;`. This last instruction allows creating a link between the pointer `p` and the variable `n`. Now, `p` contains the address of the variable `n`, and you can access the value of the variable `n` using `*p` (meaning the content of the variable pointed by `p`).
+
+ 
 
 
 
