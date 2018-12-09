@@ -571,7 +571,35 @@ int main() {
 
 In this example you see the pointer declaration `int *p;` and successively the pointer initialization `p=&n;`. This last instruction allows creating a link between the pointer `p` and the variable `n`. Now, `p` contains the address of the variable `n`, and you can access the value of the variable `n` using `*p` (meaning the content of the variable pointed by `p`).
 
- 
+You may access a structure using a pointer:  
+
+```c
+#include <stdio.h>
+#define DIM_NAME 20
+struct student {
+        int ID_number;
+        char name[DIM_NAME];
+        char surname[DIM_NAME];
+    };
+
+int main() {
+    struct student my_student;
+    struct student *my_pointer;
+    
+    my_pointer=&my_student;
+    printf("\nName: ");
+    fgets(my_pointer->name, DIM_NAME, stdin);
+    printf("\nSurname: ");
+    fgets(my_pointer->surname, DIM_NAME, stdin);
+    printf("\nID: ");
+    scanf("%d",&my_pointer->ID_number);
+
+    printf("\n\nStudent data: ");
+    printf("%s %s with ID %d\n",my_student.name,my_student.surname,my_student.ID_number);
+}
+```
+
+With the instruction `my_pointer=&my_student;` you create a link between the pointer ``my_pointer` and the variable `my_student`. As a consequence, you can use the pointer to add the information inside the components of the structure. To check if this is indeed the case just try to print the structure using the classic formalism.
 
 
 
