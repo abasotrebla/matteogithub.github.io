@@ -635,7 +635,36 @@ int main() {
 
 Despite the example is easy, you can observe the presence of all the previously discussed relevant points in this code.
 
+It is very important to understand that **arrays and pointers are strictly connected**. You can use an external pointer to manage an array by means of *pointer arithmetics*. So, if you have a situation like this:
 
+```C
+int v[N];
+int *v_ptr;
+
+v_ptr = &v[0];
+```
+
+you can use the pointer `v_ptr` to interact with the array `v`. This last instruction `v_ptr = &v[0];` meaning that your external pointer points to the first element of the array. 
+
+```C
+#include <stdio.h>
+int main() {
+  int i,v[3]={1,2,3};
+  int *v_ptr;
+
+  for(i=0;i<3;i++) printf("%d ",v[i]); //1 2 3
+  v_ptr=v; //v_ptr points to v
+  //v_ptr = &v[0]; //this is equivalent to the previous instruction
+  *(v_ptr+1)=10;
+
+  for(i=0;i<3;i++) printf("%d ",vett[i]); 
+    //You will see that the second element of v has be changed to 10
+}
+```
+
+This last example showing how to change elements of the array `v` using the external pointer `v_ptr` and pointer arithmetics. In particular, the instruction `*(v_ptr+1)=10;` allows to access and change the value of the second element of the array `v`. This is possible because `v_ptr` points to the first element of `v` (see `v_ptr=v;`) and `v_ptr+1` says to move to the next element using an offset equals to 1. The number 1 refers to 1 block of memory, where its size depends on the type you use to declare the array. It will be 4 bytes if the array is of integers, 1 byte is the arrays is of chars. The operator `*` allows accessing the value of the element.
+
+The name of the array `v` contains the address of its first element, therefore the previous expression `v_ptr = &v[0]` is equivalent to `v_ptr = v`. The only, but very important difference is that `v` is a constant and you can not change it (so, you can not write `v+1` as you can do with pointers). 
 
 ### Level 8: functions
 
