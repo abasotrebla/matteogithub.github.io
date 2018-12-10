@@ -674,7 +674,37 @@ You can also use the increment `v_ptr++` (or decrement `v_ptr--`) operator to mo
 
 ### Level 8: functions
 
-...
+Functions are subprograms, blocks of code that can be reused when a specific functionality is needed. Functions represent the first step towards *modularity*. You may use standard functions or implement your own. A function should act as a *black box*, should give some functionalities hindering the implementation. When using a function, you need to pass (most of the times) some parameters and expecting (most of the times) a value returned.
+
+If you want to create a function, you have to **declare** it, **call** it in the calling function (can be different from the *main*) and **define** it. See this trivial example:
+
+```C
+#include <stdio.h>
+int sum(int,int); //function declaration
+
+int main() {
+  int a=1,b=1,s;
+
+  s=sum(a,b); //function call
+  printf("\nThe sum is %d\n",s);
+}
+
+int sum(int c,int d) { //function definition
+  int s;
+  s=c+d;
+  return s;
+}
+```
+
+The declaration `int sum(int,int);` allows the compiler to know how the function will work, it sets the name `sum`, specify the type of the returned value `int` and also specify the number and type of parameters `(int,int)`. If you like, for clarity, you can also indicate a name for the two parameters, however, the names will be ignored. 
+
+The call `s=sum(a,b);` in the *main* allows to refer to the function and execute the instructions contained in the definition. The variables `a` and `b` are called *actual parameters*. 
+
+The definition, starting with `int sum(int c,int d)` and followed by a block of instructions, contains the set of operations to be performed when the function is called. The variables `c` and `d` are called `formal parameters` and are *local* variables, can not be seen or accessed outside the function, and contain the value of the *actual parameters*. C passes the parameters by *value*, so **you are working on a copy** of the *actual parameters*, meaning you can not change their content inside the function.
+
+*Call* and *definition* need to share the **same number**, the **same type** and the **same order** for the parameters. 
+
+
 
 
 
