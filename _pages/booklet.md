@@ -635,6 +635,8 @@ int main() {
 
 Despite the example is easy, you can observe the presence of all the previously discussed relevant points in this code.
 
+There are several other reasons that make linked lists a very powerful tool in C. For example, if you want to add or to remove an element of a list you will see that this is a very simple task. All you need to do is to update the pointers of the involved elements. The same task is much more complicated when using arrays. Try to insert a new element into an array (in any position) or to remove it. You will discover that it is not easy at all since it will require to act with all the other elements, shifting them to left or to right depending you are removing or adding the element.
+
 It is very important to understand that **arrays and pointers are strictly connected**. You can use an external pointer to manage an array by means of *pointer arithmetics*. So, if you have a situation like this:
 
 ```C
