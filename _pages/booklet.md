@@ -672,6 +672,8 @@ Finally, it should be clear that, in this context, the expressions `vett[i]` and
 
 You can also use the increment `v_ptr++` (or decrement `v_ptr--`) operator to move to the following (previous) elements of the array. However, keep in mind that in this last case you are changing the pointer and at the end of the instruction (or set of instructions) the pointer `v_ptr` is not pointing to `v` anymore unless you move it back `v_ptr=v;`. 
 
+
+
 ### Level 8: functions
 
 Functions are subprograms, blocks of code that can be reused when a specific functionality is needed. Functions represent the first step towards *modularity*. You may use standard functions or implement your own. A function should act as a *black box*, should give some functionalities hindering the implementation. When using a function, you need to pass (most of the times) some parameters and expecting (most of the times) a value returned.
@@ -700,15 +702,34 @@ The declaration `int sum(int,int);` allows the compiler to know how the function
 
 The call `s=sum(a,b);` in the *main* allows to refer to the function and execute the instructions contained in the definition. The variables `a` and `b` are called *actual parameters*. 
 
-The definition, starting with `int sum(int c,int d)` and followed by a block of instructions, contains the set of operations to be performed when the function is called. The variables `c` and `d` are called `formal parameters` and are *local* variables, can not be seen or accessed outside the function, and contain the value of the *actual parameters*. C passes the parameters by *value*, so **you are working on a copy** of the *actual parameters*, meaning you can not change their content inside the function.
+The definition, starting with `int sum(int c,int d)` and followed by a block of instructions, contains the set of operations to be performed when the function is called. The variables `c` and `d` are called `formal parameters` and are *local* variables, can not be seen or accessed outside the function, and contain the value of the *actual parameters*. C passes the parameters by *value*, so **you are working on a copy** of the *actual parameters*, meaning you can not change their content inside the function. What happens is that the *formal parameters* are initialized by the value of the *actual parameters*. *Call* and *definition* need to share the **same number**, the **same type** and the **same order** for the parameters. 
 
-*Call* and *definition* need to share the **same number**, the **same type** and the **same order** for the parameters. 
+If, for some reasons, you want to change the value of the *actual parameter* from the function, you need to use a pointer. See this example:
 
+```C
+#include <stdio.h>
+void swap(int *, int *);
+int main() {
+  int x=0,y=1;
+    
+  printf("\nBefore the call, x is %d and y is %d",x,y);
+  swap(&x, &y);
+  printf("\nAfter the call, x is %d and y is %d\n",x,y);
+}
 
+void swap(int *x, int *y) {
+  int tmp;
+  tmp=*x;
+  *x=*y;
+  *y=tmp;
+}
+```
 
+As you can see, using the pointers you can change the values of `x` and `y` defined in the *main* function. Note that this works even if the pointers have different names, there is not any relationship between `x` and `y` contained in the *main* and` x` and` y` declared local inside the function `swap`.
 
+I strongly suggest avoiding *global variables* as an implicit mechanism to pass parameters to functions!
 
-
+One important point to consider when using functions is the *scope* of variables. The *scope* of a variable is the block of a program where the variable is seen and can be used. You can learn more about the *scope* with the exercises contained in the slides and in the code you can access from the main page of the course.
 
 ### Level 9: file
 
