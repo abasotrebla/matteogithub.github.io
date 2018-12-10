@@ -729,7 +729,7 @@ As you can see, using the pointers you can change the values of `x` and `y` defi
 
 I strongly suggest avoiding *global variables* as an implicit mechanism to pass parameters to functions!
 
-One important point to consider when using functions is the *scope* of variables. The *scope* of a variable is the block of a program where the variable is seen and can be used. You can learn more about the *scope* with the exercises contained in the slides and in the code you can access from the main page of the course.
+One important point to consider when using functions is the *scope* of variables. The *scope* of a variable is the block of a program where the variable is seen and can be used. You can learn more about the *scope* with the exercises contained in the slides and in the code you can access from the main page of the course (https://matteogithub.github.io/teaching/).
 
 ### Level 9: file
 
