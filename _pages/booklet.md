@@ -12,7 +12,7 @@ Dear student, this document is for you. I know that attending the lectures may b
 
 Here you find the most significant concepts that I have discussed during the classes, with a summary and a description of what I think it is more important for you, the *take-home* message. At the following link https://matteogithub.github.io/teaching/ you find all the slides (in PDF and md format) and the *.c* file of the scripts included.
 
-This is, obviously, an ongoing work and cannot replace a book and can not be enough if you do not spend time *playing* with the code. Learning to code is not merely learning the *syntax* of a specific language. It means much more, creativity, logical thinking, and determination are extremely important in this context. 
+This is, obviously, an ongoing work and <u>cannot replace a book</u> and can not be enough if you do not spend time *playing* with the code. Learning to code is not merely learning the *syntax* of a specific language. It means much more. Creativity, logical thinking, and determination are extremely important factors in this context. 
 
 
 
