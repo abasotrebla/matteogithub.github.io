@@ -633,7 +633,7 @@ int main() {
 }
 ```
 
-Despite the example is easy, you can observe the presence of all the previous points in this code.
+Despite the example is easy, you can observe the presence of all the previously discussed relevant points in this code.
 
 
 
