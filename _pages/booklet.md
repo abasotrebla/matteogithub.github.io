@@ -666,6 +666,10 @@ This last example showing how to change elements of the array `v` using the exte
 
 The name of the array `v` contains the address of its first element, therefore the previous expression `v_ptr = &v[0]` is equivalent to `v_ptr = v`. The only, but very important difference is that `v` is a constant and you can not change it (so, you can not write `v+1` as you can do with pointers). 
 
+Finally, it should be clear that, in this context, the expressions `vett[i]` and `*(v_ptr+i)` are equivalent. 
+
+You can also use the increment `v_ptr++` (or decrement `v_ptr--`) operator to move to the following (previous) elements of the array. However, keep in mind that in this last case you are changing the pointer and at the end of the instruction (or set of instructions) the pointer `v_ptr` is not pointing to `v` anymore unless you move it back `v_ptr=v;`. 
+
 ### Level 8: functions
 
 ...
