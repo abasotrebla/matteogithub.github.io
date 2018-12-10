@@ -656,7 +656,7 @@ int main() {
 
   for(i=0;i<3;i++) printf("%d ",v[i]); //1 2 3
   v_ptr=v; //v_ptr points to v
-  //v_ptr = &v[0]; //this is equivalent to the previous instruction
+  //v_ptr = &v[0]; //this is equivalent to v_ptr=v;
   *(v_ptr+1)=10;
 
   for(i=0;i<3;i++) printf("%d ",vett[i]); 
