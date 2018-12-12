@@ -733,6 +733,87 @@ One important point to consider when using functions is the *scope* of variables
 
 It is very common to use functions that have to work on arrays. Obviously, you can easily pass a single element of an array (`v[i]`) to a function. That's really not problematic at all. But, if you need the function to work on the whole array you have to use another strategy. Unfortunately, you can not pass an array to a function, this is because it would mean to pass all the elements and therefore to make a copy of the array as a whole. How to solve this problem? Well, you need to pass the *name* of the array (`v`) to the function. Doing like that is equivalent to pass the pointer to the first element of the array, and that's really all you need. Once the function knows where the array starts you can move to the following elements using the external pointer (the formal parameter, which will be initialized with the address of the first element of the array). Remember that your function needs to know the dimension of the array, so don't forget to pass this information to the function during the call. 
 
+Now let's see a simple example, where you have to define a function to compute the *min* of an array of integers. 
+
+```C
+#include <stdio.h>
+#define DIM 10
+
+int compute_min(int *, int);
+
+int main() {
+  int n,v[DIM],i,min;
+
+  do  {
+    printf("Dimension of the array: \n");
+    scanf("%d", &n);
+  } while(n<1 || n>DIM);
+
+  printf("Add the %d elements.\n",n);
+  for(i=0;i<n;i++)  {
+      printf("Element with index - %d: ",i);
+      scanf("%d",&v[i]);
+  }
+
+  min=compute_min(v, n);
+  printf("\nThe min is: %d\n", min);
+}
+
+int compute_min(int *v, int n) {
+  int i,min=*v;
+
+  for(i=0;i<n;i++) {
+    if(*(v+i)<min)
+      min=*(v+i);
+  }
+  return min;
+}
+```
+
+As you can see, the call of function `compute_min` requires two actual parameters: the array `v` and its dimension `n`. The pointer `v`, the formal parameter, declared in the function `compute_min` is a copy of `v` (array declared in the `main`) and points to the address of the first element of the array `v`. It is not a matter of names, the two `v` are completely different things that, however, point to the same block of memory (`&v[0]`). 
+
+See this other example, which should help to understand this latter point.
+
+```C
+#include <stdio.h>
+#define DIM 10
+
+float compute_mean(int *, int);
+
+int main() {
+  int n,v[DIM],i;
+  float mean;
+
+  do  {
+    printf("Dimension of the array: \n");
+    scanf("%d", &n);
+  } while(n<1 || n>DIM);
+
+  printf("Add the %d elements.\n",n);
+  for(i=0;i<n;i++)  {
+      printf("Element with index - %d: ",i);
+      scanf("%d",&v[i]);
+  }
+
+  mean=compute_mean(v, n);
+  printf("\nThe mean is: %.1f\n", mean);
+}
+
+float compute_mean(int *v, int n) {
+  int i;
+  float mean=0;
+
+  for(i=0;i<n;i++,v++) {
+    mean+=*v;
+  }
+  return mean/n;
+}
+```
+
+As you can see, you can write v++ in the function compute_mean, without having an error, because the pointer v declared inside the function is a copy of the constant pointer v that you can use inside the `main`. 
+
+
+
 ### Level 9: file
 
 ...
