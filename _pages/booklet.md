@@ -810,7 +810,7 @@ float compute_mean(int *v, int n) {
 }
 ```
 
-As you can see, you can write v++ in the function compute_mean, without having an error, because the pointer v declared inside the function is a copy of the constant pointer v that you can use inside the `main`. 
+As you can see, you can write `v++` in the function `compute_mean`, without getting an error, because the pointer `v` declared inside the function is a copy of the constant pointer `v` that you can use inside the `main` function. 
 
 
 
