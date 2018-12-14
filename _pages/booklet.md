@@ -183,7 +183,7 @@ int main() {
   int i,n,num,sum=0;
   float mean;
 
-  printf("How many integer you want to add? ");
+  printf("How many integers you want to add? ");
   scanf("%d",&n);
   for(i=1;i<=n;++i) {
     printf("\nInteger #%d: ",i);
@@ -205,7 +205,7 @@ int main() {
   int i=1,n,num,sum=0;
   float mean;
 
-  printf("How many integer you want to add? ");
+  printf("How many integers you want to add? ");
   scanf("%d",&n);
   while(i<=n) {
     printf("\nInteger #%d: ",i);
