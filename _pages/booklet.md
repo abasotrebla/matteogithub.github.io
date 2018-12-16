@@ -841,9 +841,9 @@ struct my_list {
 
 If you forget to include this pointer (here named `next`) you will not be able to link the elements of the list.
 
-3- if you want to use your list, you still need to remember to make your last element (by means its internal pointer) points to `NULL`. This is the way you can access and browse its elements.
+3- if you want to use your list, you still need to remember to make your last element (by means its internal pointer) points to `NULL`. This is the way you can access and browse its elements and dtopping when the list is ended.
 
-4- where is your list? Well, your list will simply be a pointer to its first element. If you have correctly linked all the elements and if its last element points to `NULL`, you only need a single *external pointer* to keep track of the starting point. 
+4- where is your list? Well, your list will simply be a pointer to its first element. If you have correctly linked all the elements and if its last element points to `NULL`, you only need a single *external pointer* to keep track of the starting point. **The more important thing for you, therefore, is: do not lose this pointer, otherwise you will not have your list anymore!**
 
 These are essentially the things you need to know when managing a *linked list*. Anyway, you will not have a full understanding of this topic since you will not try using this data structure by yourself. See all the examples reported in the slides and don't forget to read a good book!
 
