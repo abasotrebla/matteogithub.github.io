@@ -824,4 +824,21 @@ As you can see, you can write `v++` in the function `compute_mean`, without gett
 
 ### Level 10: memory managment and lists
 
-...
+A *linked list* is a data structure composed by a set of homogeneous elements (all of the same type: a user-defined *struct*) which is implemented by the use of *pointers*. Here you will see how to create and manage a *linked list* where its elements are not explicitly declared but they are created during the execution of the program. 
+
+There are few but essential points that it is very important to remember when using *linked list*: 
+
+1- every time you need to create an element you need to allocate the necessary memory for it. You can do this using the `malloc` function (including the library `stdlib.h`). The `malloc` returns a pointer and needs to know the size of the element. Here an example of call for a user-defined *struct* named *my_list*: `malloc(sizeof(struct my_list))`. 
+
+2- every single element of your list will be linked to the following one by using an *internal* pointer. As a consequence, when you define your *struct* do not forget to include a *pointer* to this *struct* as a component:
+
+```C
+struct my_list {
+    int num;
+    struct my_list *next;
+};
+```
+
+If you forget to include this pointer (here named `next`) you will not be able to link the elements of the list. 
+
+ 
