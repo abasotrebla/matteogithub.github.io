@@ -824,7 +824,7 @@ As you can see, you can write `v++` in the function `compute_mean`, without gett
 
 ### Level 10: memory managment and lists
 
-A *linked list* is a data structure composed by a set of homogeneous elements (all of the same type: a user-defined *struct*) which is implemented by the use of *pointers*. Here you will see how to create and manage a *linked list* where its elements are not explicitly declared but they are created during the execution of the program. 
+A *(singly) linked list* is a data structure composed by a set of homogeneous elements (all of the same type: a user-defined *struct*) which is implemented by the use of *pointers*. Here you will see how to create and manage a *linked list* where its elements are not explicitly declared but they are created during the execution of the program. 
 
 There are few but essential points that it is very important to remember when using *linked list*: 
 
@@ -846,5 +846,18 @@ If you forget to include this pointer (here named `next`) you will not be able t
 4- where is your list? Well, your list will simply be a pointer to its first element. If you have correctly linked all the elements and if its last element points to `NULL`, you only need a single *external pointer* to keep track of the starting point. 
 
 These are essentially the things you need to know when managing a *linked list*. Anyway, you will not have a full understanding of this topic since you will not try using this data structure by yourself. See all the examples reported in the slides and don't forget to read a good book!
+
+Important note: it is very common to find the use of **typedef** in C. Therefore, even if we have not used it, it may be important to know what it means. With **typedef** you can create an *alias*. For example, you can use an *alias* for your structure as follows:
+
+```C
+struct my_list {
+    int num;
+    struct my_list *next;
+};
+typedef struct my_list list;
+list list_01, list_02;
+```
+
+As you can see, in this way you can avoid repeating the name `struct` for every single declaration. 
 
  
