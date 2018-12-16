@@ -830,7 +830,7 @@ There are few but essential points that it is very important to remember when us
 
 1- every time you need to create an element you need to allocate the necessary memory for it. You can do this using the `malloc` function (including the library `stdlib.h`). The `malloc` returns a pointer and needs to know the size of the element. Here an example of call for a user-defined *struct* named *my_list*: `malloc(sizeof(struct my_list))`. 
 
-2- every single element of your list will be linked to the following one by using an *internal* pointer. As a consequence, when you define your *struct* do not forget to include a *pointer* to this *struct* as a component:
+2- every single element of your list will be linked to the following one by using an *internal* pointer. As a consequence, when you define your *struct* do not forget to include a *pointer* (as a component) to this *struct*:
 
 ```C
 struct my_list {
