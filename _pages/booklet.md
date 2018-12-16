@@ -845,4 +845,6 @@ If you forget to include this pointer (here named `next`) you will not be able t
 
 4- where is your list? Well, your list will simply be a pointer to its first element. If you have correctly linked all the elements and if its last element points to `NULL`, you only need a single *external pointer* to keep track of the starting point. 
 
+These are essentially the things you need to know when managing a *linked list*. Anyway, you will not have a full understanding of this topic since you will not try using this data structure by yourself. See all the examples reported in the slides and don't forget to read a good book!
+
  
