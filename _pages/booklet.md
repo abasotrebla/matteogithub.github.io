@@ -839,6 +839,10 @@ struct my_list {
 };
 ```
 
-If you forget to include this pointer (here named `next`) you will not be able to link the elements of the list. 
+If you forget to include this pointer (here named `next`) you will not be able to link the elements of the list.
+
+3- if you want to use your list, you still need to remember to make your last element (by means its internal pointer) points to `NULL`. This is the way you can access and browse its elements.
+
+4- where is your list? Well, your list is a pointer to its first element. If you have correctly linked the elements and its last element points to `NULL`, you only need a single *external pointer* to keep track of the starting point. 
 
  
