@@ -854,7 +854,19 @@ struct my_list {
     int num;
     struct my_list *next;
 };
+
 typedef struct my_list list;
+list list_01, list_02;
+```
+
+Or, if you prefer:
+
+```C
+typedef struct my_list {
+    int num;
+    struct my_list *next;
+} list;
+
 list list_01, list_02;
 ```
 
