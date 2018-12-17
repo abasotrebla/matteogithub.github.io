@@ -828,7 +828,14 @@ A *(singly) linked list* is a data structure composed by a set of homogeneous el
 
 There are few but essential points that it is very important to remember when using *linked list*: 
 
-1- every time you need to create an element you need to allocate the necessary memory for it. You can do this using the `malloc` function (including the library `stdlib.h`). The `malloc` returns a pointer and needs to know the size of the element. Here an example of call for a user-defined *struct* named *my_list*: `malloc(sizeof(struct my_list))`. 
+1- every time you need to create an element you need to allocate the necessary memory for it. You can do this using the `malloc` function (including the library `stdlib.h`). The `malloc` returns a pointer and needs to know the size of the element. Here an example of call for a user-defined *struct* named *my_list*: `malloc(sizeof(struct my_list))`. See the following example used to allocate the memory needed for an element of the list `my_list`:
+
+```C
+struct my_list * p;
+p=(struct my_list *)malloc(sizeof(struct my_list));
+```
+
+Now, you can use the pointer `p` to access the new allocated memory location.
 
 2- every single element of your list will be linked to the following one by using an *internal* pointer. As a consequence, when you define your *struct* do not forget to include a *pointer* (as a component) to this *struct*:
 
@@ -841,9 +848,9 @@ struct my_list {
 
 If you forget to include this pointer (here named `next`) you will not be able to link the elements of the list.
 
-3- if you want to use your list, you still need to remember to make your last element (by means its internal pointer) points to `NULL`. This is the way you can access and browse its elements and dtopping when the list is ended.
+3- if you want to use your list, you still need to remember to make your last element (by means its internal pointer) points to `NULL`. This is the way you can access and browse its elements and stopping when the list is ended.
 
-4- where is your list? Well, your list will simply be a pointer to its first element. If you have correctly linked all the elements and if its last element points to `NULL`, you only need a single *external pointer* to keep track of the starting point. **The more important thing for you, therefore, is: <u>do not lose this pointer, otherwise you will not have your list anymore!</u>**
+4- where is your list? Well, your list will simply be a pointer to its first element. If you have correctly linked all the elements and if its last element points to `NULL`, you only need a single *external pointer* to keep track of the starting point. **The more important thing for you, therefore, is: <u>do not lose this pointer, otherwise, you will not have your list anymore!</u>** Also, as a consequence, you will not be able to de-allocate (make free) the memory, and that locations will not be available during the execution of the program.
 
 These are essentially the things you need to know when managing a *linked list*. Anyway, you will not have a full understanding of this topic since you will not try using this data structure by yourself. See all the examples reported in the slides and don't forget to read a good book!
 
