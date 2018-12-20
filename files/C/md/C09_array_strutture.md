@@ -96,7 +96,7 @@ studente[i].matricola);
 ---
 
 # Esercizio
-Scrivere un programma che calcoli la media del voto di laurea di N studenti e stampi l’elenco degli studenti con la differenza del loro voto rispetto alla media
+Scrivere un programma che calcoli la media del voto di laurea di N studenti e stampi lâ€™elenco degli studenti con la differenza del loro voto rispetto alla media
 
 ---
 
