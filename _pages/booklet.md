@@ -12,7 +12,7 @@ Dear student, this document is for you. I know that attending the lectures may b
 
 Here you find the most significant concepts that I have discussed during the classes, with a summary and a description of what I think it is more important for you, the *take-home* message. At the following link https://matteogithub.github.io/teaching/ you find all the slides (in PDF and md format) and the *.c* file of the scripts included.
 
-This is, obviously, an ongoing work and <u>cannot replace a book</u> and can not be enough if you do not spend time *playing* with the code. Learning to code is not merely learning the *syntax* of a specific language. It means much more. Creativity, logical thinking, and determination are extremely important factors in this context. 
+This is, obviously, an ongoing work and <u>cannot replace a book</u> and can not be enough if you do not spend time *playing* with the code. Learning to code is not merely learning the *syntax* of a specific language. It means much more. Creativity, logical thinking, and determination are extremely important factors in this context.
 
 
 
@@ -33,15 +33,15 @@ int main() {
 }
 ```
 
-Now you need to compile and run the program. This program should work correctly. You should not have any error or warning. What does this mean? This means that you should see a *terminal* window pop-up and the sentence "*Hello world*" appear. If this happened, well, that's great. You have written your first program. 
+Now you need to compile and run the program. This program should work correctly. You should not have any error or warning. What does this mean? This means that you should see a *terminal* window pop-up and the sentence "*Hello world*" appear. If this happened, well, that's great. You have written your first program.
 
-Before to go on with something more complex and interesting, just try to understand what you have just written in your file. I am quite confident that it is very important to understand the structure of a C program. This is especially easy to understand now when the program is short. 
+Before to go on with something more complex and interesting, just try to understand what you have just written in your file. I am quite confident that it is very important to understand the structure of a C program. This is especially easy to understand now when the program is short.
 
 The line `//My first program`is a comment. This is just ignored by the compiler. However, using comments into your script is really useful. You should add more comments you can. It will be of great help when you (or others) will open your file days later.
 
 The line `#include <stdio.h>` includes an external library to your program. A library allows you to use a set of functionalities that you do not need to re-implement by yourself. In this specific case the `stdio.h` (standard input and output) library gives you the possibility to use the `printf` function. When it will be necessary, I will show you other interesting libraries that you can easily include in your code.
 
-Every C program has a main function. This function is called `main`. Your program will start from here, always from here. You will learn more about functions later. All you need to know right now is that this function will contain the instructions (but not only) that your program will perform and that this function (in this case) will return an integer (see the `int` just before the name of the function). Your `main` function has a name, has a `int` value that is expected to return and has a *body*. The body is delimited by the braces `{}`. 
+Every C program has a main function. This function is called `main`. Your program will start from here, always from here. You will learn more about functions later. All you need to know right now is that this function will contain the instructions (but not only) that your program will perform and that this function (in this case) will return an integer (see the `int` just before the name of the function). Your `main` function has a name, has a `int` value that is expected to return and has a *body*. The body is delimited by the braces `{}`.
 
 The last instruction of the function is `return 0;`. This is the value your function returns. If you omit to include this instruction your program will work as well, but you will discover later that this is not an aesthetic point.
 
@@ -49,7 +49,7 @@ The last instruction of the function is `return 0;`. This is the value your func
 
 ### Level 1: variables
 
-Now you are ready to use *variables*. Think about *variables* as containers that will store the data you want to use during your program. The easy part is that you can refer to this container (a block of the memory of your computer) with a name, wherever it is. You can choose the name you like, there are only a few simple rules you have to respect for the name. However, just try to use a name that allows understanding what the variable will store. 
+Now you are ready to use *variables*. Think about *variables* as containers that will store the data you want to use during your program. The easy part is that you can refer to this container (a block of the memory of your computer) with a name, wherever it is. You can choose the name you like, there are only a few simple rules you have to respect for the name. However, just try to use a name that allows understanding what the variable will store.
 
 In C, before to use a variable you have to *declare* it. The declaration is important because it links your variable with a *type*. When you choose a type, you are defining the dimension of the container and the operations you will be able to perform on this variable. The dimension may still depend on the architecture of your computer/machine. This is an example of a variable declaration:
 
@@ -124,9 +124,9 @@ int main() {
 
   printf("Type a positive integer: ");
   scanf("%d",&n);  
-  if(n%2 == 0) 
+  if(n%2 == 0)
   	printf("\n%d is even\n",n);
-  else 
+  else
   	printf("\n%d is odd\n",n);
 }
 ```
@@ -134,7 +134,7 @@ int main() {
 It is important to keep in mind that in C any **non-zero** value is interpreted as **true** (**false** if it is **zero**). *Relational* and *logical* operators may be used to build more complex expressions, see this example:
 
 ```c
-#include <stdio.h> 
+#include <stdio.h>
 int main() {
    int year;
 
@@ -167,13 +167,13 @@ int main() {
 }
 ```
 
-Note that the expression `n % 2`, where `%` is called modulus operator, returns the remainder when `n` is divided by 2. 
+Note that the expression `n % 2`, where `%` is called modulus operator, returns the remainder when `n` is divided by 2.
 
 
 
 ### Level 4: loop statements
 
-If you want to build even more powerful program, more clear and concise scripts, all you need is a *loop statement*. When you need to execute an instruction (or a block of instructions) more than one time you have to define a loop. The basic rule, in this case, is: *never write the same instruction twice*. The loop statement you will use more frequently is the **for**. In its more simple form, a `for` loop will look like this: `for(i=0;i<n;i++)` followed by an instruction or a block of instructions (in this case you need to define a block using `{}`). As you may have noticed this statement contains three different fields (separated by a two `;`). In the first field, the variable `i`, that needs to be declared somewhere, represents the variable that controls the loop. The instruction `i=0` will be executed only the first time and allows to initialize this variable. Keep in mind the initializing is very important, and that a wrong assignment may strongly affect your program even if you do not get any error from the compiler. The second field contains a conditional expression (`i<n`) that will be evaluated **before** to execute the instruction or the block. This is the reason why a `for` loop (as well as a `while` loop) may be never executed. If the expression is false the instruction (or the block) will be skipped. The third field (`i++`), an increment of the control variable will be executed, this happens after all the instructions contained in the loop have been executed. The instruction `i++` is just another way to write `i=i+1`. When you use this compact form, you may need, in some specific case, to pay attention to the difference between `i++` and `++i`. This is not the case of a `for` loop when the increment of `i` will be done after all the other instructions, but if the increment is inside an expression you may observe a different behavior between the two different approaches. Try to assign to a variable the result of the increment and see what happens in the two different cases (i..e, `n=i++;` and `n=++i;`). Another potential problem that you have to consider when you design your loop is to avoid the definition of an *infinite loop*. This is the case when the conditional expression inside the loop is always true. 
+If you want to build even more powerful program, more clear and concise scripts, all you need is a *loop statement*. When you need to execute an instruction (or a block of instructions) more than one time you have to define a loop. The basic rule, in this case, is: *never write the same instruction twice*. The loop statement you will use more frequently is the **for**. In its more simple form, a `for` loop will look like this: `for(i=0;i<n;i++)` followed by an instruction or a block of instructions (in this case you need to define a block using `{}`). As you may have noticed this statement contains three different fields (separated by a two `;`). In the first field, the variable `i`, that needs to be declared somewhere, represents the variable that controls the loop. The instruction `i=0` will be executed only the first time and allows to initialize this variable. Keep in mind the initializing is very important, and that a wrong assignment may strongly affect your program even if you do not get any error from the compiler. The second field contains a conditional expression (`i<n`) that will be evaluated **before** to execute the instruction or the block. This is the reason why a `for` loop (as well as a `while` loop) may be never executed. If the expression is false the instruction (or the block) will be skipped. The third field (`i++`), an increment of the control variable will be executed, this happens after all the instructions contained in the loop have been executed. The instruction `i++` is just another way to write `i=i+1`. When you use this compact form, you may need, in some specific case, to pay attention to the difference between `i++` and `++i`. This is not the case of a `for` loop when the increment of `i` will be done after all the other instructions, but if the increment is inside an expression you may observe a different behavior between the two different approaches. Try to assign to a variable the result of the increment and see what happens in the two different cases (i..e, `n=i++;` and `n=++i;`). Another potential problem that you have to consider when you design your loop is to avoid the definition of an *infinite loop*. This is the case when the conditional expression inside the loop is always true.
 
 Now see this very simple example on the use of a `for` loop:
 
@@ -218,7 +218,7 @@ int main() {
 }
 ```
 
-The two programs are equivalent. You may, in general, use a `for` or a `while` indifferently. 
+The two programs are equivalent. You may, in general, use a `for` or a `while` indifferently.
 
 Although it is less frequently used, the `do-while` loop may be not completely ignored. The only difference with the `while` is that the `do-while` allows executing the instruction (or a block) at least one time. We will use this loop later in some exercise when necessary.
 
@@ -226,7 +226,7 @@ Although it is less frequently used, the `do-while` loop may be not completely i
 
 ### Level 5: arrays
 
-Now things will start to be more interesting. Arrays are a very powerful tool. If you need to manage a set of homogenous variables (all of the same *type*) you may not need to declare them separately. As for every other variable, an array is first declared: `int v[100];`. This declaration defines a monodimensional array, named `v`  where each element has the same name and the same type `int`. Between `[]` you have to define its dimension. This means that 100 blocks of memory of the same dimension (4 bytes) will be reserved for your variable `v`. It is very important to remember that these blocks are physically adjacent. Therefore, if you know the address of the first element, you can easily access to all the other elements just moving to the next block. To select an element you need to use an *index* as follows: `v[5]` (this represents the element of index 5). Remember that the first element of an array has index `zero` (i.e., `v[0]` is your first element). As a consequence, if your array has 100 elements, the last one has index equals to 99 (i.e., `v[99]` is your last element). Pay extra attention to do not try to access elements outside this range (`0`:`N-1` if N is the dimension of your array)! Your compiler may not give you an error, but this is a very dangerous situation since you have not the control of the content of the next memory block. Also, try to avoid using a fixed number to specify the dimension of the array. It is preferable to use a `#define N 100` that can be more easly changed later if you need to increase the size of your array. 
+Now things will start to be more interesting. Arrays are a very powerful tool. If you need to manage a set of homogenous variables (all of the same *type*) you may not need to declare them separately. As for every other variable, an array is first declared: `int v[100];`. This declaration defines a monodimensional array, named `v`  where each element has the same name and the same type `int`. Between `[]` you have to define its dimension. This means that 100 blocks of memory of the same dimension (4 bytes) will be reserved for your variable `v`. It is very important to remember that these blocks are physically adjacent. Therefore, if you know the address of the first element, you can easily access to all the other elements just moving to the next block. To select an element you need to use an *index* as follows: `v[5]` (this represents the element of index 5). Remember that the first element of an array has index `zero` (i.e., `v[0]` is your first element). As a consequence, if your array has 100 elements, the last one has index equals to 99 (i.e., `v[99]` is your last element). Pay extra attention to do not try to access elements outside this range (`0`:`N-1` if N is the dimension of your array)! Your compiler may not give you an error, but this is a very dangerous situation since you have not the control of the content of the next memory block. Also, try to avoid using a fixed number to specify the dimension of the array. It is preferable to use a `#define N 100` that can be more easly changed later if you need to increase the size of your array.
 
 See this very simple example on the usage of an array:
 
@@ -250,7 +250,7 @@ int main() {
 
 ```
 
-The main difference with the previous example is that in this case, after the `for` loop you still have all the grades stored inside the array, each one in a specific and consecutive block of memory. Remember that as a programmer it is you that need to *design* your array to store a sufficient number of elements. If 10 is not enough, just change the value into the `#define`, so you do not need to change your code in any other place. 
+The main difference with the previous example is that in this case, after the `for` loop you still have all the grades stored inside the array, each one in a specific and consecutive block of memory. Remember that as a programmer it is you that need to *design* your array to store a sufficient number of elements. If 10 is not enough, just change the value into the `#define`, so you do not need to change your code in any other place.
 
 Remember that you can not assign an array to another array using this instruction: `v=w;`. The name of an array is a *constant pointer*, meaning that `v` stores the address of the first element of the array: `v=&v[0]` and you cannot make `v` points to another memory address. If you need to copy an array into another array, you have to copy every single element at a time (therefore acting with an index into a loop).
 
@@ -310,7 +310,7 @@ int main() {
 }
 ```
 
-As you can see, in order to compute the min (max) of the elements stored in an array you can start assuming that its first element is indeed the min (max). After that, you scan all the elements and if you find an element minor (greater) of min (max) than min (max) will be changed to the value of the current element. 
+As you can see, in order to compute the min (max) of the elements stored in an array you can start assuming that its first element is indeed the min (max). After that, you scan all the elements and if you find an element minor (greater) of min (max) than min (max) will be changed to the value of the current element.
 
 Now let's see how to *search for* a specific value in an array of integers.
 
@@ -340,7 +340,7 @@ int main() {
 
 After the array is loaded, the user enters an integer (`elem`) to be found in the array. In this case, the problem is solved using a `while` loop (note the use of the variable `i`, initialized outside the loop and later incremented inside the loop). The condition (`elem!=v[i] && i<n`) that is tested before to execute the instruction of the loop ( `++i`) is about to check if `elem` was found and that you still have elements to scan on the array (avoiding to match `elem` with blocks of memory outside the array `v`). Therefore, you can go out from the loop when you have found the integer or alternatively when you have verified all the elements of your array. Anyway, you still do not know, so you need to check what is the reason that let your program go out from the `while` loop. Try with `if(elem==v[i])`,  if this condition is true it means you have indeed found `elem` inside the array, otherwise you have not.
 
-In the following example, you will see how *to order* the elements of an array in ascending order. The proposed solution is very simple and intuitive, however, it does not represent an optimal way to solve the problem as we will briefly discuss later. 
+In the following example, you will see how *to order* the elements of an array in ascending order. The proposed solution is very simple and intuitive, however, it does not represent an optimal way to solve the problem as we will briefly discuss later.
 
 ```C
 #include <stdio.h>
@@ -424,7 +424,7 @@ int main() {
 
 ```
 
-Note that when you use the `scanf` for a string you do not need to use the symbol `&`. This is because `scanf` expect the address of a variable, but the name of a string is the pointer to the first element of the array of characters so it is not necessary to specify the address using the symbol `&` as you do for any other variable. 
+Note that when you use the `scanf` for a string you do not need to use the symbol `&`. This is because `scanf` expect the address of a variable, but the name of a string is the pointer to the first element of the array of characters so it is not necessary to specify the address using the symbol `&` as you do for any other variable.
 
 Anyway, it is better do not use `scanf` for strings at all. This is because `scanf` does not explicitly allow to check for the dimension of the string and because it may not work as you expect. If you type a *space* your input will be interrupted. The best solution to input strings is by using the function `fgets`. See the new version of the last code:
 
@@ -554,7 +554,7 @@ int main() {
 
 ### Level 7: pointers
 
-Pointers in C are everywhere and may be used for almost everything. *Pointers are variables that can store the address of another variable*. As you will see, pointers are used to access and to interact with arrays, to change the content of variables when they are passed to functions, to use files, to manage dynamic memory allocation and to cope with linked lists. To use a pointer you need to declare it as follows: `int *my_pointer;`. The declaration contains a name to be assigned to the pointer where the name comes after the symbol `*`. Furthermore, with the declaration, you have to specify the type of the variable pointed. There are no restrictions to the type of variables that you may need to point. 
+Pointers in C are everywhere and may be used for almost everything. *Pointers are variables that can store the address of another variable*. As you will see, pointers are used to access and to interact with arrays, to change the content of variables when they are passed to functions, to use files, to manage dynamic memory allocation and to cope with linked lists. To use a pointer you need to declare it as follows: `int *my_pointer;`. The declaration contains a name to be assigned to the pointer where the name comes after the symbol `*`. Furthermore, with the declaration, you have to specify the type of the variable pointed. There are no restrictions to the type of variables that you may need to point.
 
 Let's see ho to use pointers:
 
@@ -585,7 +585,7 @@ struct student {
 int main() {
     struct student my_student;
     struct student *my_pointer;
-    
+
     my_pointer=&my_student;
     printf("\nName: ");
     fgets(my_pointer->name, DIM_NAME, stdin);
@@ -605,7 +605,7 @@ The pointers represent the more important ingredient for the linked lists. Even 
 
 1. Differently from arrays, the elements of a linked list are not stored in adjacent blocks of memory, so the only way to know where the next element is located is to store its address in the previous element. As a consequence, every single element of a linked list must contain a pointer to a variable of the same type.
 2. Your linked list, if all the elements are correctly linked, is identified by a pointer to its first element. You need to do not lose this pointer, otherwise, you will not have your list anymore.
-3. If you want to access all the elements of the linked list you have to clearly detect the last element. So, you need to remember to make the pointer included in the last element of the list points to the **NULL** pointer. 
+3. If you want to access all the elements of the linked list you have to clearly detect the last element. So, you need to remember to make the pointer included in the last element of the list points to the **NULL** pointer.
 
 Here an example of linked list with static allocation (all the elements of the list must be declared).
 
@@ -646,7 +646,7 @@ int *v_ptr;
 v_ptr = &v[0];
 ```
 
-you can use the pointer `v_ptr` to interact with the array `v`. This last instruction `v_ptr = &v[0];` meaning that your external pointer points to the first element of the array. 
+you can use the pointer `v_ptr` to interact with the array `v`. This last instruction `v_ptr = &v[0];` meaning that your external pointer points to the first element of the array.
 
 ```C
 #include <stdio.h>
@@ -659,18 +659,18 @@ int main() {
   //v_ptr = &v[0]; //this is equivalent to v_ptr=v;
   *(v_ptr+1)=10;
 
-  for(i=0;i<3;i++) printf("%d ",vett[i]); 
+  for(i=0;i<3;i++) printf("%d ",v[i]);
     //You will see that the second element of v has be changed to 10
 }
 ```
 
 This last example showing how to change elements of the array `v` using the external pointer `v_ptr` and pointer arithmetics. In particular, the instruction `*(v_ptr+1)=10;` allows to access and change the value of the second element of the array `v`. This is possible because `v_ptr` points to the first element of `v` (see `v_ptr=v;`) and `v_ptr+1` says to move to the next element using an offset equals to 1. The number 1 refers to 1 block of memory, where its size depends on the type you use to declare the array. It will be 4 bytes if the array is of integers, 1 byte is the arrays is of chars. The operator `*` allows accessing the value of the element.
 
-The name of the array `v` contains the address of its first element, therefore the previous expression `v_ptr = &v[0]` is equivalent to `v_ptr = v`. The only, but very important difference is that `v` is a constant and you can not change it (so, you can not write `v+1` as you can do with pointers). 
+The name of the array `v` contains the address of its first element, therefore the previous expression `v_ptr = &v[0]` is equivalent to `v_ptr = v`. The only, but very important difference is that `v` is a constant and you can not change it (so, you can not write `v+1` as you can do with pointers).
 
-Finally, it should be clear that, in this context, the expressions `vett[i]` and `*(v_ptr+i)` are equivalent. 
+Finally, it should be clear that, in this context, the expressions `v[i]` and `*(v_ptr+i)` are equivalent.
 
-You can also use the increment `v_ptr++` (or decrement `v_ptr--`) operator to move to the following (previous) elements of the array. However, keep in mind that in this last case you are changing the pointer and at the end of the instruction (or set of instructions) the pointer `v_ptr` is not pointing to `v` anymore unless you move it back `v_ptr=v;`. 
+You can also use the increment `v_ptr++` (or decrement `v_ptr--`) operator to move to the following (previous) elements of the array. However, keep in mind that in this last case you are changing the pointer and at the end of the instruction (or set of instructions) the pointer `v_ptr` is not pointing to `v` anymore unless you move it back `v_ptr=v;`.
 
 
 
@@ -698,11 +698,11 @@ int sum(int c,int d) { //function definition
 }
 ```
 
-The declaration `int sum(int,int);` allows the compiler to know how the function will work, it sets the name `sum`, specify the type of the returned value `int` and also specify the number and type of parameters `(int,int)`. If you like, for clarity, you can also indicate a name for the two parameters, however, the names will be ignored. 
+The declaration `int sum(int,int);` allows the compiler to know how the function will work, it sets the name `sum`, specify the type of the returned value `int` and also specify the number and type of parameters `(int,int)`. If you like, for clarity, you can also indicate a name for the two parameters, however, the names will be ignored.
 
-The call `s=sum(a,b);` in the *main* allows to refer to the function and execute the instructions contained in the definition. The variables `a` and `b` are called *actual parameters*. 
+The call `s=sum(a,b);` in the *main* allows to refer to the function and execute the instructions contained in the definition. The variables `a` and `b` are called *actual parameters*.
 
-The definition, starting with `int sum(int c,int d)` and followed by a block of instructions, contains the set of operations to be performed when the function is called. The variables `c` and `d` are called `formal parameters` and are *local* variables, can not be seen or accessed outside the function, and contain the value of the *actual parameters*. C passes the parameters by *value*, so **you are working on a copy** of the *actual parameters*, meaning you can not change their content inside the function. What happens is that the *formal parameters* are initialized by the value of the *actual parameters*. *Call* and *definition* need to share the **same number**, the **same type** and the **same order** for the parameters. 
+The definition, starting with `int sum(int c,int d)` and followed by a block of instructions, contains the set of operations to be performed when the function is called. The variables `c` and `d` are called `formal parameters` and are *local* variables, can not be seen or accessed outside the function, and contain the value of the *actual parameters*. C passes the parameters by *value*, so **you are working on a copy** of the *actual parameters*, meaning you can not change their content inside the function. What happens is that the *formal parameters* are initialized by the value of the *actual parameters*. *Call* and *definition* need to share the **same number**, the **same type** and the **same order** for the parameters.
 
 If, for some reasons, you want to change the value of the *actual parameter* from the function, you need to use a pointer. See this example:
 
@@ -711,7 +711,7 @@ If, for some reasons, you want to change the value of the *actual parameter* fro
 void swap(int *, int *);
 int main() {
   int x=0,y=1;
-    
+
   printf("\nBefore the call, x is %d and y is %d",x,y);
   swap(&x, &y);
   printf("\nAfter the call, x is %d and y is %d\n",x,y);
@@ -731,9 +731,9 @@ I strongly suggest avoiding *global variables* as an implicit mechanism to pass 
 
 One important point to consider when using functions is the *scope* of variables. The *scope* of a variable is the block of a program where the variable is seen and can be used. You can learn more about the *scope* with the exercises contained in the slides and in the code you can access from the main page of the course (https://matteogithub.github.io/teaching/).
 
-It is very common to use functions that have to work on arrays. Obviously, you can easily pass a single element of an array (`v[i]`) to a function. That's really not problematic at all. But, if you need the function to work on the whole array you have to use another strategy. Unfortunately, you can not pass an array to a function, this is because it would mean to pass all the elements and therefore to make a copy of the array as a whole. How to solve this problem? Well, you need to pass the *name* of the array (`v`) to the function. Doing like that is equivalent to pass the pointer to the first element of the array, and that's really all you need. Once the function knows where the array starts you can move to the following elements using the external pointer (the formal parameter, which will be initialized with the address of the first element of the array). Remember that your function needs to know the dimension of the array, so don't forget to pass this information to the function during the call. 
+It is very common to use functions that have to work on arrays. Obviously, you can easily pass a single element of an array (`v[i]`) to a function. That's really not problematic at all. But, if you need the function to work on the whole array you have to use another strategy. Unfortunately, you can not pass an array to a function, this is because it would mean to pass all the elements and therefore to make a copy of the array as a whole. How to solve this problem? Well, you need to pass the *name* of the array (`v`) to the function. Doing like that is equivalent to pass the pointer to the first element of the array, and that's really all you need. Once the function knows where the array starts you can move to the following elements using the external pointer (the formal parameter, which will be initialized with the address of the first element of the array). Remember that your function needs to know the dimension of the array, so don't forget to pass this information to the function during the call.
 
-Now let's see a simple example, where you have to define a function to compute the *min* of an array of integers. 
+Now let's see a simple example, where you have to define a function to compute the *min* of an array of integers.
 
 ```C
 #include <stdio.h>
@@ -770,7 +770,7 @@ int compute_min(int *v, int n) {
 }
 ```
 
-As you can see, the call of function `compute_min` requires two actual parameters: the array `v` and its dimension `n`. The pointer `v`, the formal parameter, declared in the function `compute_min` is a copy of `v` (array declared in the `main`) and points to the address of the first element of the array `v`. It is not a matter of names, the two `v` are completely different things that, however, point to the same block of memory (`&v[0]`). 
+As you can see, the call of function `compute_min` requires two actual parameters: the array `v` and its dimension `n`. The pointer `v`, the formal parameter, declared in the function `compute_min` is a copy of `v` (array declared in the `main`) and points to the address of the first element of the array `v`. It is not a matter of names, the two `v` are completely different things that, however, point to the same block of memory (`&v[0]`).
 
 See this other example, which should help to understand this latter point.
 
@@ -810,7 +810,7 @@ float compute_mean(int *v, int n) {
 }
 ```
 
-As you can see, you can write `v++` in the function `compute_mean`, without getting an error, because the pointer `v` declared inside the function is a copy of the constant pointer `v` that you can use inside the `main` function. 
+As you can see, you can write `v++` in the function `compute_mean`, without getting an error, because the pointer `v` declared inside the function is a copy of the constant pointer `v` that you can use inside the `main` function.
 
 
 
@@ -824,9 +824,9 @@ As you can see, you can write `v++` in the function `compute_mean`, without gett
 
 ### Level 10: memory managment and lists
 
-A *(singly) linked list* is a data structure composed by a set of homogeneous elements (all of the same type: a user-defined *struct*) which is implemented by the use of *pointers*. Here you will see how to create and manage a *linked list* where its elements are not explicitly declared but they are created during the execution of the program. 
+A *(singly) linked list* is a data structure composed by a set of homogeneous elements (all of the same type: a user-defined *struct*) which is implemented by the use of *pointers*. Here you will see how to create and manage a *linked list* where its elements are not explicitly declared but they are created during the execution of the program.
 
-There are few but essential points that it is very important to remember when using *linked list*: 
+There are few but essential points that it is very important to remember when using *linked list*:
 
 1- every time you need to create an element you need to allocate the necessary memory for it. You can do this using the `malloc` function (including the library `stdlib.h`). The `malloc` returns a pointer and needs to know the size of the element. Here an example of call for a user-defined *struct* named *my_list*: `malloc(sizeof(struct my_list))`. See the following example used to allocate the memory needed for an element of the list `my_list`:
 
@@ -877,6 +877,4 @@ typedef struct my_list {
 list list_01, list_02;
 ```
 
-As you can see, in this way you can avoid repeating the name `struct` for every single declaration. 
-
- 
+As you can see, in this way you can avoid repeating the name `struct` for every single declaration.
