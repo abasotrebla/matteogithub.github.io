@@ -165,7 +165,7 @@ int main() {
 }
 ```
 
-Note that the expression `n % 2`, where `%` is called modulus operator, returns the remainder when `n` is divided by 2.
+Note that the expression `n % 2`, where `%` is called modulus operator, returns the remainder of `n` divided by 2.
 
 
 
