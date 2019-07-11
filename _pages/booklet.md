@@ -17,11 +17,11 @@ This is an ongoing work and obviously **can not replace a book** and can not be 
 
 ### Level 0: to start
 
-Probably, right now, your level is **0**. It means that, as for most of your colleagues, you have never coded before. This is not a problem. Indeed, this booklet is for people like you. There are not prerequisites for this course. The number 0 is very important, you will read about this number again and again in this booklet. Your level will change, will increase, adding more competencies, the offset from the initial level will change. Just remember this when we will talk about *arrays*. You will understand that starting from 0 may be relevant!
+Probably, right now, your level is **0**. It means that, as for most of your colleagues, you have never coded before. This is not a problem. Indeed, this booklet is for students like you. There are not specific prerequisites for this course. The number 0 is very important, you will read about this number again in this booklet. Your level will change, will increase, adding more competencies, the offset from the initial level will change. Just remember this when we will talk about *arrays*. You will understand that starting from 0 may be relevant!
 
-All you need to start is to set up a *development environment*. There are several solutions for this task, choose the one you like more. As a student, you can probably apply for a free license of **cLion**: https://www.jetbrains.com/shop/eform/students. Another good solution is to use **Atom**, which however may need more tuning on the settings.
+All you need to start is to set up a *development environment*. There are several solutions for this task - not independent from your Operating System - choose the one you like more. As a Unica student, you can apply for a free license of **cLion**: https://www.jetbrains.com/shop/eform/students. Another good solution is to use **Atom**, which however may need more tuning on the settings.
 
-Now that your system is ready to work just try a very simple program. All you need is to open a new file, save it as .c and assign a name. Copy and paste the code you find below in your editor.
+Now that your system is ready to work, just try a very simple program. All you need is to open a new file, save it as .c and assign a name. Copy and paste the code you find below in your editor:
 
 ```c
 //My first program
