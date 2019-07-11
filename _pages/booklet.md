@@ -40,9 +40,9 @@ The line `//My first program` is a comment. This line is ignored by the compiler
 
 The line `#include <stdio.h>` includes an external library to your program. A library allows you to use a set of functionalities that you do not need to re-implement by yourself. In this specific case the `stdio.h` (standard input and output) library gives you the possibility to use the `printf` function (and others). When it will be necessary, I will show you other interesting libraries that you can easily include in your code.
 
-Every C program has a **main** function. This function is called `main`. Your program will start from there, always from there. You will learn more about functions later. All you need to know now is that this function will contain the instructions (but not only) that your program will perform and that it (as in this case) will return an integer (see the `int` just before the name of the function). Your `main` function has a name, has a `int` value that is expected to return and has a *body*. The body is delimited by the braces `{}`.
+Every C program has a **main** function. This function is called `main`. Your program will start from there, always from there. You will learn more about functions later. All you need to know now is that this function will contain the instructions (but not only) that your program will perform and that it (as in this case) will return an integer (see the `int` before the name of the function). Your `main` function has a name, has an `int` value that is expected to be returned and has a *body*. The body is delimited by the braces `{}`.
 
-The last instruction of the function is `return 0;`. This is the value your function returns. If you omit to include this instruction your program will work as well, but you will discover later that this is not an aesthetic point.
+The last instruction of the main function is `return 0;`. This is the value your function returns. If you omit to include this instruction your program will work, but you will discover later that this is not a simple aesthetic point.
 
 
 ### Level 1: variables
