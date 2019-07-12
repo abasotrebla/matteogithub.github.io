@@ -92,7 +92,7 @@ It is very important to do not confuse the symbol `=` with the symbol `==`. The 
 
 ### Level 2: input and output
 
-To further increase your level, you certainly need to learn how to use a very important and basic function. This is the `scanf`. The `scanf` is not always easy to use, you will understand this later, however, it represents the first tool you can use to allow a user interacting with your program. In particular, by using the `scanf` you can pass an *external* input to your program, reading the information needed using the keyboard. Here a simple example to show you how to use it:
+To further increase your level, you need to learn how to use a very important and basic function. This is the `scanf`. The `scanf` is not always easy to use (you will understand this later) however, it represents the first tool you can use to make a user interacting with your program. In particular, by using the `scanf` you can pass an *external* input to your program - reading the information from the keyboard. Here a simple example:
 
 ```c
 #include <stdio.h>
@@ -107,7 +107,7 @@ int main() {
 }
 ```
 
-This very simple program takes as input two integers from the keyboard (base and height) and computes the area of a rectangle. The `scanf` is in some way similar to the `printf` since you still have to define the format (`%d` in this case as it is a decimal integer value). Note that you need to put the symbol `&` before the variable name. This symbol allows referring to the *address* of the variable. This is important because you want to change the content of the variable and since all arguments in C are passed to functions *by value* you need to pass the address of a variable if you want the function to change the content and not to work on a copy of the variable. We will go back to this point later in more details.
+This very simple program takes as input two integers from the keyboard (base and height) and computes the area of a rectangle. The `scanf` is in some way similar to the `printf` since you still have to define the format (`%d` in this case as it is a decimal integer value). Note that you need to write the symbol `&` before the variable name. This symbol allows referring to the *address* of the variable. This is important because you want to change the content of the variable and since all arguments in C are passed (to functions) *by value* you need to pass the address of a variable if you want the function to change the content (and not to work on a copy of the variable). We will go back to this point later in more details.
 
 
 
