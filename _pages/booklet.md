@@ -49,13 +49,13 @@ The last instruction of the main function is `return 0;`. This is the value your
 
 Now you are ready to use *variables*. Think about *variables* as containers that will store the data you want to use during your program. The easy part is that you can refer to this container (a block of the memory of your computer) with a name, wherever it is. You can choose the name you like, there are only a few simple rules you have to respect for the name. However, just try to use a name that allows understanding what the variable will store.
 
-In C, before to use a variable you have to *declare* it. The declaration is important because it links your variable with a *type*. When you choose a type, you are defining the dimension of the container and the operations you will be able to perform on this variable. The dimension may still depend on the architecture of your computer/machine. This is an example of a variable declaration:
+In C, before to use a variable you have to *declare* it. The declaration is important because it links your variable with a *type*. When you choose a type, you are defining the dimension (number of bytes) of the container and the operations you will be able to perform on this variable. The dimension may still depend on the architecture of your computer/machine. This is an example of a variable declaration:
 
 ```c
 int number;
 ```
 
-With this instruction, you are declaring a variable named `number` as an integer. What happens is that a block of memory will be reserved for this variable and that you can access this block of memory simply using its name. How is this block long? Probably 4 bytes, but just test it yourself:
+With this instruction, you are declaring a variable named `number` as an integer (`int`). What happens is that a block of memory will be reserved for this variable and that you can access this block of memory simply using its name. How is this block long? Probably 4 bytes, but just test it yourself:
 
 ```C
 #include <stdio.h>
@@ -67,11 +67,11 @@ int main() {
 }
 ```
 
-As you can see, the `printf` may be used to print the result of an expression or the content of a variable. You just need to indicate where you want the result to appear using a specific format (`%ld` in this case, which is for long integer) and report the expression/s or the variable/s after the comma. The character `\n` represents a new line, so that the output in the terminal may be read more easily.
+As you can see, the `printf` function may be used to print the result of an expression or the content of a variable. You just need to indicate where you want the value to appear using a specific format (`%ld` in this case, which refers to `long integer`) and report the expression/s or the variable/s after the comma. The character `\n` represents a new line, so that the output in the terminal may be read more easily.
 
-Let's go back to declarations and types. There are few basic types that you can use without the need to define any new (as you will learn to do later). The basic types are: `int`, `float`, `double` and `char`. You will have to choose the type of a variable depending on the context of the program. From this choice, it will depend on both what you can do with your variable and the dimension of the block of memory reserved for this variable.
+Let's go back to declarations and types. There are few basic types. You will see later that you can define new types. The basic types are: `int`, `float`, `double` and `char`. You will choose the type to assign to a variable depending on the context of the program. From this choice, it will depend (i) what you can do with your variable and (ii) the dimension of the block of memory reserved for this variable.
 
-To interact with your variables you may need to use the arithmetic operators (`+`, `-`, `* ` and `/`) to build some very simple expressions and to use the `=` symbol to assign a value to a variable as shown below:
+To interact with your variables you can use the arithmetic operators (`+`, `-`, `* ` and `/`) to build some very simple expressions. The symbol `=` is used to assign a value to a variable as shown below:
 
 ```C
 #include <stdio.h>
@@ -84,9 +84,9 @@ int main() {
 }
 ```
 
-The variable `num_byte` is declared and successively its value will be initialized with the result of the expression `sizeof(int)`. As a consequence, the block of memory that you call `num_byte` (which is 4 bytes long) will store the (binary) representation of the corresponding number (4, in this case).
+The variable `num_byte` is declared and successively its value will be initialised with the result of the expression `sizeof(int)`. As a consequence, the block of memory that you call `num_byte` (which is 4 bytes long) will store the (binary) representation of the corresponding number (4, in this case).
 
-It is really very important to do not confuse the symbol `=` with the symbol `==`. The first is intended to assign something to a variable, the second is intended to compare variables or expressions. If you use `=` when you wanted to use `==` you can not get an error and therefore your program will work but not as you would expect!
+It is very important to do not confuse the symbol `=` with the symbol `==`. The first is intended to assign a value to a variable, the second is intended to compare variables or expressions. If you use `=` when you were intended to use `==` you can not get an error and therefore your program will work but not as you would expect!
 
 
 
