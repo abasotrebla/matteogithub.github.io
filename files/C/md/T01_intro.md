@@ -1,4 +1,4 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
@@ -11,7 +11,7 @@ Corso di Laurea in Ingegneria Elettrica, Elettronica e Informatica
 # Il Docente
 
 **Matteo Fraschini** - DIEE
-Padiglione M - fronte ingresso Biblioteca
+Padiglione M - fronte ingresso Biblioteca - 3° Piano
 
 Contatti:
 - moduloelementi@gmail.com / fraschin@unica.it
@@ -22,6 +22,15 @@ Ricevimento: martedì ore 15 (email)
 
 ---
 
+# Orario delle lezioni
+
+# ![](/Users/matteo/Downloads/images/orario.png)
+
+
+---
+
+# Corso integrato
+
 Corso integrato di **Sistemi di Elaborazione delle Informazioni**
 
 - `Elementi di Informatica` 6 CFU
@@ -30,20 +39,43 @@ Corso integrato di **Sistemi di Elaborazione delle Informazioni**
 Il voto finale corrisponderà  alla media dei voti dei due moduli
 
 ---
-Guida online
+Guida online - Esse3: scheda insegnamento
 
 # ![](/Users/matteo/Downloads/images/corso.png)
 
 ---
-Moodle - http://moodle.unica.it/course/view.php?id=363
 
-# ![](/Users/matteo/Downloads/images/moodle.png)
+# Materiale Didattico
+
+Sito docente: https://matteogithub.github.io/
+
+# ![](/Users/matteo/Downloads/images/github_main.png)
+
 ---
-# Cosa trovo su Moodle?
+
+# Materiale Didattico
+
+Sito docente: https://matteogithub.github.io/teaching/
+
+# ![](/Users/matteo/Downloads/images/github_teaching.png)
+
+---
+elearning.unica.it
+
+# ![](/Users/matteo/Downloads/images/elearning.png)
+---
+
+elearning.unica.it
+
+# ![](/Users/matteo/Downloads/images/elearning2.png)
+---
+
+# Cosa trovo sul portale elearning.unica.it?
 - Avvisi importanti
+- FAQ
 - Forum news
-- Materiale didattico: utilizzare AA 18/19
-- Esiti compiti/prove
+- Link al materiale didattico
+- Esiti compiti
 - Selezione di compiti: testi e soluzioni
 
 `NOTA BENE`: Le "soluzioni" proposte in questa sezione vengono fornite con l'esclusiva motivazione di facilitare la preparazione del compito, possono non essere complete e non devono essere considerate definitive o uniche procedure possibili che portino alla soluzione del problema descritto.
