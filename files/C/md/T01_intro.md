@@ -19,6 +19,23 @@ Contatti:
 
 Ricevimento: martedì ore 15 (email)
 
+---
+
+# Cosa vi dovete aspettare da me...
+
+- il vostro apprendimento sarà la mia priorità
+- farò il possibile per rispondere nel più breve tempo possibile ai vostri quesiti
+- parlerò lentamente
+- cercherò di rendere la lezione meno noiosa possibile
+
+---
+
+# Cosa mi aspetto da voi...
+
+- partecipare alle lezioni sarà per voi una priorità
+- il massimo rispetto verso i vostri colleghi e verso i docenti ospiti
+- partecipazione attiva durante le attiivtà del corso
+
 
 ---
 
@@ -60,6 +77,22 @@ Sito docente: https://matteogithub.github.io/teaching/
 # ![](/Users/matteo/Downloads/images/github_teaching.png)
 
 ---
+
+# Materiale Didattico
+
+# ![](/Users/matteo/Downloads/images/PDF.png)
+
+---
+
+# Materiale Didattico
+
+T = Teoria
+C = Programmazione C
+
+01... = ordine cronologico della lezione
+
+
+---
 elearning.unica.it
 
 # ![](/Users/matteo/Downloads/images/elearning.png)
@@ -80,29 +113,6 @@ elearning.unica.it
 
 `NOTA BENE`: Le "soluzioni" proposte in questa sezione vengono fornite con l'esclusiva motivazione di facilitare la preparazione del compito, possono non essere complete e non devono essere considerate definitive o uniche procedure possibili che portino alla soluzione del problema descritto.
 
----
-
-# Conosciamoci meglio...
-
-Alcune domande... **Mentimeter**
-
-www.menti.com
-
----
-# La mia attività di ricerca
-
-- Brain signal processing
-- Connectivity and Network analysis in M/EEG
-
----
-
-# ![](/Users/matteo/Downloads/images/brain.png)
-
----
-
-# ![](/Users/matteo/Downloads/images/papers.png)
-
-`Laboratorio di Neuroimaging` 2 CFU - Giugno/Luglio
 
 ---
 
@@ -178,7 +188,7 @@ Conoscenze di base di matematica e algebra. Dimestichezza con l'uso del calcolat
 # Metodi Didattici
 `Lezioni frontali`: 48 ore.
 `Esercizi di linguaggio C`: 12 ore.
-`Tutorato`: 37 ore.
+`Tutorato`: 40 ore.
 
 ---
 
@@ -190,9 +200,10 @@ Conoscenze di base di matematica e algebra. Dimestichezza con l'uso del calcolat
 - Nel caso in cui si sostenga la prova orale il voto finale sarà pesato con il `70%` per la prova scritta e il `30%` per la prova orale.
 
 ---
+
 # Prove intermedie
 Prove aperte a tutti gli studenti
-`Prima prova`: settimana del 12 novembre
+`Prima prova`: settimana del 4 novembre
 `Seconda prova`: primi di gennaio
 
 Per poter sostenere la seconda prova occorre aver superato la prima prova (almeno 16/30)
@@ -215,55 +226,37 @@ Bellini, Guidi. **Linguaggio C**. McGraw-Hill
 
 # Il Tutor
 
-**Pierluigi Tuveri** - eleinfotutor@gmail.com
+**Da definire** 
 
-Attività (`37 ore`)
+Attività (`40 ore`)
 
-- ricevimento (lunedì 15-16)
-- esercitazioni (mercoledì 17-19)
-
-
+- ricevimento (era lunedì 15-16)
+- esercitazioni (era mercoledì 17-19)
 
 ---
 
-# Il Tutor
 
-**Calendario Ottobre** - AULA C
+# Conosciamoci meglio...
 
-- 1 ottobre 15-16
-- 3 ottobre 17-19
-- 8 ottobre 15-16
-- 15 ottobre 15-16
-- 17 ottobre 17-19
-- 22 ottobre 15-16
-- 29 ottobre 15-16
-- 31 ottobre 17-19
+Alcune domande... **Mentimeter**
+
+www.menti.com
+
+---
+# La mia attività di ricerca
+
+- Brain signal processing
+- Connectivity and Network analysis in M/EEG
 
 ---
 
-# Il Tutor
-
-**Calendario Novembre** - AULA C
-
-- 5 novembre 15-16
-- 12 novembre 17-19
-- 14 novembre 15-16
-- 19 novembre 15-16
-- 26 novembre 15-16
-- 28 novembre 17-19
-
+# ![](/Users/matteo/Downloads/images/brain.png)
 
 ---
 
-# Il Tutor
+# ![](/Users/matteo/Downloads/images/papers.png)
 
-**Calendario Dicembre** - AULA C
-
-- 3 dicembre 15-16
-- 5 dicembre 17-19
-- 10 dicembre 15-16
-- 12 dicembre 17-19
-- 17 dicembre 15-16
+`Laboratorio di Neuroimaging` 2 CFU - Giugno/Luglio
 
 ---
 
