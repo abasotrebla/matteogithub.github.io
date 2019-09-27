@@ -1,11 +1,11 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # Introduzione al C
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
@@ -53,9 +53,9 @@ Unix/Linux
 ---
 # IDE – Integrated Development Enviroment
 
-Linux: **gcc**
+**Linux**: *gcc*
 
-Mac OS: dipendenza da **XCode**
+**Mac OS**: dipendenza da *XCode*
 
 `gcc -o nome_programma mio_codice.c`
 
@@ -65,12 +65,13 @@ Mac OS: dipendenza da **XCode**
 
 Windows (multipiattaforma)
 
-- DEV-C++
+- DEV-C++ (obsoleto)
 - Eclipse
 - CodeLite
 - Visual Studio (Code)
-- Atom
-- CLion
+- **Atom**
+- **CLion** (licenza con credenziali di Unica)
+- **Qt Creator**
 
 ---
 
