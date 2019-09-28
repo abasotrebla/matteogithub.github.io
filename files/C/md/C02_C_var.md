@@ -1,11 +1,13 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- $theme: default -->
+
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: variabili e assegnamenti
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
@@ -13,18 +15,17 @@ Elementi di Informatica 2018/2019
 
 - Dichiarazione delle variabili che saranno utilizzate nel programma.
 - Assegnazione di un **nome** (identificatore) e attribuzione del **tipo**.
-- Il tipo definisce le caratteristiche che regolano lâ€™uso di una variabile.
+- Il tipo definisce le caratteristiche che regolano l'uso di una variabile.
 
 `tipo nomevariabile;`
-`tipo nomevariabile, nome_var;`
-`tipo variabile, var1, var2;`
+`tipo nomevariabile1, nomevariabile2;`
 
 
 ---
 
 # Dichiarazione di variabili
 
-`tipo variabile, var1, var2;`
+`tipo nomevariabile1, nomevariabile2;`
 
 ```C
 int i;
@@ -35,6 +36,7 @@ int j=0;
 ```
 
 NB: il C è *case sensitive*!
+NB: scelta del nome delle variabili
 
 ---
 
@@ -54,7 +56,7 @@ const int N = 100;
 //non e' scope-controlled
 ```
 
-Vantaggi: chiarezza e parametrizzazione
+Differenze: vantaggi e svantaggi
 
 ---
 # Istruzione di assegnamento
@@ -63,12 +65,12 @@ Viene utilizzato il simbolo `=`
 
 Permette di assegnare ad una variabile un valore o il risultato di una espressione (*o il valore restituito da una funzione*).
 
-identificatore `<-` valore
+identificatore `=` valore
 
 ```C
 a=0;
 c='a';
-x=x+1; //ATTENZIONE!
+x=x+1; //Come si interpreta?
 ```
 
 ---
