@@ -73,6 +73,8 @@ c='a';
 x=x+1; //Come si interpreta?
 ```
 
+NB: da non confondere con il sombolo  `==` (*uguale a*)!
+
 ---
 
 # Operatori aritmetici
