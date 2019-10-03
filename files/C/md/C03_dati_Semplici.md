@@ -1,11 +1,11 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: tipi di dato semplici
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
