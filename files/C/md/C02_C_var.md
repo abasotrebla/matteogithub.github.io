@@ -35,7 +35,7 @@ int j=0;
 
 ```
 
-NB: il C è *case sensitive*!
+NB: il C Ã¨ *case sensitive*!
 NB: scelta del nome delle variabili
 
 ---
@@ -174,6 +174,30 @@ int main()
 ```
 
 ---
+
+# Istruzione scanf
+
+Inserimento di valori (da tastiera)
+
+```C
+scanf("%d", &base);
+```
+
+---
+
+# Istruzione scanf
+
+Inserimento di valori (da tastiera)
+
+```C
+scanf("%d", &base);
+```
+Cosa indica il simbolo `&`?
+Perchè si usa il simbolo `&`?
+Cosa succede se non uso il simbolo `&`? 
+
+---
+
 # Istruzione scanf
 
 Inserimento di valori (da tastiera)
@@ -182,9 +206,18 @@ Inserimento di valori (da tastiera)
 scanf("%d", &base);
 ```
 `&` indica l'indirizzo di memoria della variabile `base`
+`&` si usa perché la scanf si aspetta un puntatore (*C: passaggio per valore*)
+se non utilizzo il simbolo `&` il programma si comparta in modo *anomalo*
 
 ---
-# Istruzione scanf
+
+# Esercizio
+
+Scrivere un programma in C che permetta di calcolare l'area di un rettangolo. La base e l'altezza devono essere letti da tastiera.
+
+---
+
+# Soluzione
 
 ```C
 #include <stdio.h>
@@ -258,7 +291,7 @@ Unione di operatori aritmetici e assegnazione:
 
 `count += 10;`
 
-somma l’espressione a destra con l’espressione a sinistra e assegna alla variabile a sinistra
+somma l'espressione a destra con l'espressione a sinistra e assegna alla variabile a sinistra
 
 `count = count + 10;`
 
