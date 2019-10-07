@@ -1,11 +1,11 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: strutture di controllo decisionali
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
@@ -68,7 +68,7 @@ Le espressioni logiche restituiscono un valore numerico!
 # if
 
 - Consente di eseguire un'istruzione al verificarsi di una condizione
-- Oppure di eseguire, **in alternativa**, due sequenze di istruzioni diverse
+- Oppure di eseguire **in alternativa** un'altra istruzione
 
 `if (condizione) {istruzioni} else {istruzioni}`
 
