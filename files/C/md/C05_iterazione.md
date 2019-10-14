@@ -1,17 +1,17 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: iterazione
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
 # Iterazione
 
-Permette di sviluppare programmi con processi ripetitivi (**cicli**), evitando di scrivere più volta la stessa istruzione.
+Permette di sviluppare programmi con processi ripetitivi (**cicli**), evitando di scrivere più volta la/e stessa/e istruzione/i.
 
 ---
 
@@ -69,7 +69,6 @@ int main()
 
 NB: l'incremento/decremento viene svolto dopo che il corpo del ciclo è stato eseguito!!!
 
-NB: segue la `if` una istruzione o un blocco di istruzioni `{ }`
 
 ---
 
