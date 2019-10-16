@@ -1,7 +1,3 @@
-<!-- footer: M Fraschini 2019-2020 -->
-
-<!-- page_number: true -->
-
 
 # C: iterazione
 
@@ -68,7 +64,6 @@ int main()
 # For
 
 NB: l'incremento/decremento viene svolto dopo che il corpo del ciclo è stato eseguito!!!
-
 
 ---
 
@@ -411,7 +406,6 @@ int main() {
 
 Le istruzioni `for` e `while` verificano la condizione prima che il ciclo venga eseguito. 
 **Il corpo del ciclo potrebbe non essere eseguito mai!**
-
 
 ---
 
