@@ -2,6 +2,7 @@
 # C: iterazione
 
 Elementi di Informatica
+*Twitter: @moduloelementi*
 
 ---
 
