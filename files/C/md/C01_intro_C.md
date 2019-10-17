@@ -6,6 +6,7 @@
 # Introduzione al C
 
 Elementi di Informatica
+*Twitter: @moduloelementi*
 
 ---
 
