@@ -240,7 +240,7 @@ int main()
 
 `while(condizione) {istruzioni;}`
 
-Il ciclo `while` impone la ripetizione del blocco di istruzioni fino a quando la condizione non diventa FALSE
+Il ciclo `while` impone la ripetizione del blocco di istruzioni fino a quando la *condizione* non diventa FALSE
 - valutazione della condizione
 - se condizione è FALSE -> non viene eseguito il corpo del ciclo
 - si valuta nuovamente la condizione e così via…
@@ -252,6 +252,7 @@ Il ciclo `while` impone la ripetizione del blocco di istruzioni fino a quando la
 
 # While
 
+Esempio:
 ```C
 #include <stdio.h>
 int main()

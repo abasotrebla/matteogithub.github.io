@@ -1,11 +1,12 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: Array
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
+*Twitter: @moduloelementi*
 
 ---
 
@@ -34,7 +35,7 @@ E' quindi una **variabile strutturata**, i cui elementi sono tutti dello stesso 
 int vett[10];
 ```
 
-- Con la dichiarazione riserviamo lo spazio di memoria centrale sufficiente per il nostro array
+- Con la dichiarazione riserviamo lo spazio di memoria sufficiente per il nostro array
 - Evitiamo di dover dichiarare 10 variabili
 
 ---
@@ -130,9 +131,9 @@ int main()
 {
   int i,n,voti[NVOTI],somma=0;
   float media;
-  printf("Quanti n vuoi inserire? ");
+  printf("Quanti voti vuoi inserire? ");
   scanf("%d",&n);
-  for(i=0;i<n;++i)  {
+  for(i=0;i<n;i++)  {
     printf("\nInserisci voto %d: ",i+1);
     scanf("%d",&voti[i]);
     somma+=voti[i];
@@ -153,7 +154,7 @@ int main()
 
 ...
 
-  for(i=0;i<n;++i)  {
+  for(i=0;i<n;i++)  {
     printf("\nInserisci voto %d: ",i+1);
     scanf("%d",&voti[i]);
     somma+=voti[i];
@@ -165,6 +166,23 @@ int main()
 	- Viene utilizzato meno spazio
 	- La scelta avviene a cura del programmatore!
 
+---
+
+# Esempio
+Controllo dimensione Array
+```C
+#include <stdio.h>
+#define NVOTI 10
+int main(){
+    int i,n,voti[NVOTI],somma=0;
+    float media;
+
+    do {
+        printf("Quanti voti vuoi inserire? ");
+        scanf("%d",&n);
+    } while(n<1 || n > NVOTI);
+}
+```
 ---
 
 # Array
@@ -185,7 +203,7 @@ oppure
 ```C
 int vett[]={1,2,3};
 ```
-Nel secondo caso la dimensione è comunque pari a 3 :+1:
+Nel secondo caso la dimensione è pari a 3 :+1:
 
 ---
 
