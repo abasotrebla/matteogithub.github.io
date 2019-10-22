@@ -882,7 +882,7 @@ list list_01, list_02;
 
 As you can see, in this way you can avoid repeating the name `struct` for every single declaration.
 
-There is not built-in dynamic array in C. Nevertheless, you can use  the `malloc` or `calloc` functions to get the results. See the following (simple) example:
+There is not a built-in dynamic array in C. Nevertheless, you can still use  the `malloc` or `calloc` functions to get the result. See the following (simple) example:
 
 ```c
 #include <stdio.h>
