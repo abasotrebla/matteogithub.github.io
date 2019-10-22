@@ -825,7 +825,7 @@ As you can see, you can write `v++` in the function `compute_mean`, without gett
 
 
 
-### Level 10: memory managment and lists
+### Level 10: memory management and lists
 
 A *(singly) linked list* is a data structure composed by a set of homogeneous elements (all of the same type: a user-defined *struct*) which is implemented by the use of *pointers*. Here you will see how to create and manage a *linked list* where its elements are not explicitly declared but they are created during the execution of the program.
 
@@ -881,3 +881,33 @@ list list_01, list_02;
 ```
 
 As you can see, in this way you can avoid repeating the name `struct` for every single declaration.
+
+There is not built-in dynamic array in C. Nevertheless, you can use  the `malloc` or `calloc` functions to get the results. See the following (simple) example:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    int i,n;
+    int *ptr;
+
+    printf("Inserisce dimensione array: ");
+    scanf("%d",&n);
+
+    ptr=(int*) calloc(n, sizeof(int));
+    //ptr=(int*) malloc(n * sizeof(int));
+
+    for(i=0;i<n;i++) {
+        printf("\nInserisce valore: ");
+        //scanf("%d",&ptr[i]);
+        scanf("%d",ptr+i);
+    }
+
+    for(i=0;i<n;i++)
+        printf("%d ",*(ptr+i));
+        //printf("%d ",ptr[i]));
+
+    free(ptr);
+}
+```
