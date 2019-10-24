@@ -1,9 +1,9 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
-# Per comprendere l'importanza delle liste lineari concatenate provate a svolgere questi esercizi con gli array
+# Esempi avanzati sugli array
 
 ---
 
