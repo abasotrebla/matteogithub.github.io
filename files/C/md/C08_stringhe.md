@@ -1,11 +1,11 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: Stringhe
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
@@ -21,8 +21,8 @@ Le **stringhe** sono array di caratteri (tipo `char`)
 
 `char c[10];` <- vettore di 10 caratteri
 
-#### Non Ã¨ indispensabile specificare il numero di elementi
-La dimensione sarÃ Â  determinata da: 
+#### Non è indispensabile specificare il numero di elementi
+La dimensione sarà determinata da: 
 - inizializzazione + carattere *null* (`\0`)
 
 `char stringa[] = "Elementi di Informatica";`
