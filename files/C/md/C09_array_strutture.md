@@ -1,11 +1,11 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: Array e Strutture
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
@@ -22,14 +22,13 @@ Elementi di Informatica 2018/2019
 ```C
 #include <stdio.h>
 #define NOME 20
-int main() {
     struct anagr
     {
         int matricola;
         char nome[NOME];
         char cognome[NOME];
     };
-
+int main() {
     struct anagr studente;
 
     printf("\nNome studente: ");
@@ -52,14 +51,13 @@ int main() {
 #include <stdio.h>
 #define DIM_NOME 20
 #define DIM_STUD 100
-
-int main() {
     struct anagr {
         int matricola;
         char nome[DIM_NOME];
         char cognome[DIM_NOME];
     };
 
+int main() {
     struct anagr studente[DIM_STUD];
     int n_studenti;
 ```
@@ -106,14 +104,13 @@ Scrivere un programma che calcoli la media del voto di laurea di N studenti e st
 #include <stdio.h>
 #define DIM_NOME 20
 #define DIM_STUD 100
-
-int main() {
     struct anagr {
         int voto_laurea;
         char nome[DIM_NOME];
         char cognome[DIM_NOME];
     };
 
+int main() {
     struct anagr studente[DIM_STUD];
     int n_studenti,somma=0,i;
     float media;
@@ -175,8 +172,6 @@ Creare un programma che permetta di inserire i voti di N esami per M studenti e 
 #define DIM_NOME 20
 #define DIM_STUD 1000
 #define DIM_ESAME 50
-
-int main() {
     struct corso {
         int voto;
         char nome[DIM_NOME];
@@ -188,6 +183,7 @@ int main() {
         struct corso esame[DIM_ESAME];
     };
 
+int main() {
     struct anagr studente[DIM_STUD];
     int n_studenti,n_esami,somma[DIM_STUD]={0};
     float media[DIM_STUD]={0};

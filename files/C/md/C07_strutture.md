@@ -1,11 +1,15 @@
-<!-- footer: M Fraschini 2018-2019 -->
+---
+marp: true
+---
+
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: Strutture
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
@@ -15,7 +19,7 @@ Elementi di Informatica 2018/2019
 
 - Quando si usa una struttura :question: 
 
-	- Quando abbiamo necessitÃ  di trattare un **insieme NON omogeneo** di dati :exclamation:
+	- Quando abbiamo necessità  di trattare un **insieme NON omogeneo** di dati :exclamation:
 
 ---
 
@@ -27,11 +31,11 @@ Elementi di Informatica 2018/2019
 
 `int giorno, mese, anno;`
 
-Tre variabili per ogni data. Se serve unâ€™altra data, dobbiamo dichiarare altre tre variabiliâ€¦
+Tre variabili per ogni data. Se serve un'altra data, dobbiamo dichiarare altre tre variabili
 
 **Le tre variabili sono logicamente collegate**
 
-Sarebbe utile poterle raggruppare! Usiamo le struttureâ€¦
+Sarebbe utile poterle raggruppare! Usiamo le strutture
 
 
 ---
@@ -100,14 +104,13 @@ Esempio:
 ```C
 #include <stdio.h>
 
-int main() {
-
  struct data {
  int giorno;
  int mese;
  int anno;
 };
 
+int main() {
 struct data oggi;
 
 printf("Inserisci la data di oggi: ");
@@ -123,14 +126,13 @@ printf("Oggi: %d/%d/%d",oggi.giorno,oggi.mese,oggi.anno);
 ```C
 #include <stdio.h>
 
-int main() {
-
  struct data {
  int giorno;
  int mese;
  int anno;
 };
 
+int main() {
 struct data oggi = {6, 11, 2018};
 
 printf("\nOggi e' %d/%d/%d",oggi.giorno,oggi.mese,oggi.anno);
@@ -144,14 +146,13 @@ printf("\nOggi e' %d/%d/%d",oggi.giorno,oggi.mese,oggi.anno);
 ```C
 #include <stdio.h>
 
-int main() {
-
  struct data {
  int giorno;
  int mese;
  int anno;
 };
 
+int main() {
 struct data oggi = {.giorno=6, .mese=11, .anno=2018};
 
 printf("\nOggi e' %d/%d/%d",oggi.giorno,oggi.mese,oggi.anno);
@@ -165,15 +166,14 @@ printf("\nOggi e' %d/%d/%d",oggi.giorno,oggi.mese,oggi.anno);
 ```C
 #include <stdio.h>
 
-int main() {
-
  struct data {
  int giorno;
  int mese;
  int anno;
 } oggi = {.giorno=6, .mese=11, .anno=2018};
 
+int main() {
+
 printf("\nOggi e' %d/%d/%d",oggi.giorno,oggi.mese,oggi.anno);
 }
 ```
-
