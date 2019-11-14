@@ -30,7 +30,7 @@ I **puntatori** sono delle variabili alle quali può essere assegnato un indiriz
 
 `int *int_pointer;`
 
-Occorre specificare il tipo base (in questo caso `int`) e il nome della variabile (in questo case `int_pointer`) preceduto dal simbolo `*`
+Occorre specificare il tipo base (in questo caso `int`) e il nome della variabile (in questo caso `int_pointer`) preceduto dal simbolo `*`
 
 
 ---
@@ -43,7 +43,7 @@ int *p;
 
 p=&n; //non assegna a p il valore di n!
 ```
-In questo caso caso la variabile puntatore ad intero `p` è inizializzata con l'indirizzo di `n`
+In questo caso la variabile puntatore ad intero `p` è inizializzata con l'indirizzo di `n`
 
 # ![](/Users/matteo/Downloads/images/pointer.png)
 
