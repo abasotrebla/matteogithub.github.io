@@ -6,12 +6,14 @@
 # C: Funzioni
 
 Elementi di Informatica 2018
+Twitter: @moduloelementi
+Telegram: Canale pubblico e Gruppo privato
 
 ---
 
 # Le funzioni
 
-Le funzioni sono dei sottoprogrammi costituiti da un insieme di istruzioni
+Le funzioni sono dei **sottoprogrammi** costituiti da un insieme di istruzioni
 
 Il loro uso permette di realizzare programmi più chiari da leggere, da capire e da modificare, infatti...
 - attraverso l’uso delle funzioni si evita di dover riscrivere più volte del codice
@@ -29,7 +31,10 @@ Creazione librerie (scanf, printf) che nascondono i dettagli implementativi
 
 Abbiamo già usato le funzioni!
 ```C
-int main()
+int main() {
+
+  return 0;
+}
 ```
 
 ---
@@ -62,7 +67,7 @@ int somma(int c,int d) //nome dei parametri formali
 {
   int s;
   s=c+d;
-  return s; //restituiamo s al main
+  return s; //restituiamo s al main (o alla funzione chiamante)
 }
 ```
 
@@ -72,7 +77,7 @@ La definizione deve essere inserita subito dopo la chiusura del `main`
 
 # Funzioni: chiamata
 
-La chiamata permette di *eseguire* la funzione, passare i parametri (*attuali*) ed assegnare il valore restituito
+La **chiamata** permette di *eseguire* la funzione, passare i parametri (*attuali*) ed assegnare il valore restituito
 
 Esempio:
 
@@ -323,10 +328,69 @@ Nome globale – **variabile globale**
 
 # Visibilità (scope)
 
+Esempio:
+
+```C
+#include <stdio.h>
+
+int main() {
+
+  for(int i=0;i<10;i++)
+    printf("%d",i);
+  printf("%d",i);
+
+}
+```
+
+Cosa produce questo programma?
+
+---
+
+# Visibilità (scope)
+
+Esempio:
+
+```C
+#include <stdio.h>
+
+int main() {
+  int i;
+
+  for(i=0;i<10;i++)
+    printf("%d",i);
+  printf("%d",i);
+
+}
+```
+
+E questo?
+
+---
+
+# Visibilità (scope)
+
 Occorre prestatare particolare attenzione al **mascheramento**
 
 **Mascheramento**: la dichiarazione di una variabile locale può *nascondere* (e quindi *mascherare*) una variabile con lo **stesso nome** dichiarata in un blocco più esterno (o globale)
 
+
+---
+
+# Mascheramento
+
+```C
+#include <stdio.h>
+
+int main() {
+  int i=-1;
+
+  for(int i=0;i<10;i++)
+    printf("%d ",i);
+  printf("\n%d",i);
+
+}
+```
+Provate questo codice
 
 ---
 
@@ -352,7 +416,6 @@ int quadrato(int n) {
 ```
 
 E' possibile che il mascheramento avvenga senza rendersene conto!
-
 
 ---
 
