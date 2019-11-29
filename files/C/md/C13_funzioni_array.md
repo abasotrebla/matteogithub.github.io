@@ -79,7 +79,7 @@ int calcola_minimo(int *v, int n) {
 ---
 
 # Esercizio
-Scrivere un programma in C, attraverso l'uso di una funzione, permetta di calcolare la media degli elementi di un vettore
+Scrivere un programma in C che, attraverso l'uso di una funzione, permetta di calcolare la media degli elementi di un vettore
 
 ___
 
@@ -148,7 +148,7 @@ float calcola_media(int *v, int n) {
 ---
 
 # Esercizio
-Scrivere un programma in C, che attraverso l'uso di una funzione, permetta di ordinare gli elementi di un array
+Scrivere un programma in C che, attraverso l'uso di una funzione, permetta di ordinare gli elementi di un array
 
 ---
 
