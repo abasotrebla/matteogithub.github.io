@@ -5,7 +5,7 @@
 
 # C: Funzioni
 
-Elementi di Informatica 2018
+Elementi di Informatica 2019-2020
 Twitter: @moduloelementi
 Telegram: Canale pubblico e Gruppo privato
 
