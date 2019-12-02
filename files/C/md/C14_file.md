@@ -1,11 +1,11 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: I File
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
@@ -14,6 +14,8 @@ Elementi di Informatica 2018/2019
 Nel C è possibile operare su file solamente in termini di sequenze di byte: **stream**
 
 Non esistono funzioni di alto livello come in altri linguaggi 
+
+Usiamo i puntatori. File di **testo** e file **binari**
 
 :point_right: Attenzione al SO. 
 
@@ -46,7 +48,7 @@ FILE *fileptr;
 fileptr = fopen(“my_file”, “r”); //r -> in lettura
 ```
 
-2. `fclose()` chiude un file e permette di salvara i dati
+2. `fclose()` chiude un file e permette di salvare i dati
 
 ```C
 fclose(fileptr);
@@ -65,93 +67,7 @@ fclose(fileptr);
 
 ---
 
-# I File: esempio di lettura
-
-```C
-#include <stdio.h>
-#define DIM 100
-
-int main() {
-  FILE *fileptr;
-  char vettore[DIM];
-  int size=1; //in byte di 1 elemento
-  int n; //num elementi letti
-  int i;
-
-  fileptr=fopen("file01","r"); //path!
-
-  if(fileptr==NULL)
-    printf("\nFile inesistente\n");
-  else {
-    n=fread(vettore,size,DIM,fileptr);
-  }
-
-  for(i=0;i<n;i++)
-    printf("%c",vettore[i]);
-  fclose(fileptr);  
-}
-```
-
----
-
-# I File: `fread()`
-
-`fread()` permette di leggere un file, traferire (stream) su un vettore di char ciò che legge e restituire il numero di elementi letti
-
-Se è stato letto tutto il contenuto del file `fread()` restituisce `0`
-
-La lettura avviene in sequenza spostando il puntatore del numero di byte necessario.
-
----
-
-# I File: esempio di scrittura
-
-```C
-#include <stdio.h>
-#include <string.h>
-#define DIM 100
-
-int main() {
-
-  FILE *fileptr;
-  char vettore[DIM];
-  int size=1,n,i,len;
-
-  printf("Inserisci del testo: ");
-  scanf("%s",vettore);
-  len=strlen(vettore);
-
-  fileptr=fopen("file02","w");
-  n=fwrite(vettore,size,len,fileptr);
-  fclose(fileptr);
-}
-```
-
----
-
-# I File: `fwrite()`
-
-`fwrite()` permette di scrivere su un file, traferire (stream) da un vettore di char ciò che legge e restituire il numero di elementi scritti
-
-La scrittura avviene in sequenza spostando il puntatore del numero di byte necessario.
-
----
-
-# I File: *sequenziale vs random*
-
-Posizionare il puntatore: `fseek()`
-
-Consente di posizionare il puntatore in una qualunque posizione all’interno del file (sia in lettura che in scrittura)
-
-`fseek(fp, n, 0)` fp viene posizionato sul n° byte a partire dall’inizio del file
-`fseek(fp, n, 1)` fp viene posizionato sul n° byte a partire dalla posizione attuale
-`fseek(fp, n, 2)` fp viene posizionato sul n° byte a partire dalla fine del file
-
-`n=ftell(fp)` //restituisce la posizione attuale del puntatore
-
----
-
-# I File: altre funzioni per lettura e scrittura 
+# I File: funzioni per lettura e scrittura 
 
 `fprintf()` e `fscanf()`: simili a `printf()` e `scanf()` ma interagiscono con i file e consentono di agire in modo "formattato"
 
@@ -431,7 +347,7 @@ void scrivi_file(int *v, int n, float media) {
 
 # Esercizio
 
-# ![](/Users/matteo/Downloads/images/ex05.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/ex05.png)
 
 
 ---
@@ -502,3 +418,88 @@ void scrivi_file(int *v1, int *v2, int d1, int d2) {
   }
 }
 ```
+
+---
+
+# I File: `fread()` - (low-level reading)
+
+`fread()` permette di leggere un file, traferire (stream) su un vettore di char ciò che legge e restituire il numero di elementi letti
+
+Se è stato letto tutto il contenuto del file `fread()` restituisce `0`
+
+La lettura avviene in sequenza spostando il puntatore del numero di byte necessario.
+
+---
+
+# I File: esempio di lettura
+
+```C
+#include <stdio.h>
+#define DIM 100
+
+int main() {
+  FILE *fileptr;
+  char vettore[DIM];
+  int size=1; //in byte di 1 elemento
+  int n; //num elementi letti
+  int i;
+
+  fileptr=fopen("file01","r"); //path!
+
+  if(fileptr==NULL)
+    printf("\nFile inesistente\n");
+  else {
+    n=fread(vettore,size,DIM,fileptr);
+      for(i=0;i<n;i++)
+        printf("%c",vettore[i]);
+    fclose(fileptr);
+  }
+}
+```
+
+---
+
+# I File: `fwrite()`- (low-level writing)
+
+`fwrite()` permette di scrivere su un file, traferire (stream) da un vettore di char ciò che legge e restituire il numero di elementi scritti
+
+La scrittura avviene in sequenza spostando il puntatore del numero di byte necessario.
+
+---
+
+# I File: esempio di scrittura
+
+```C
+#include <stdio.h>
+#include <string.h>
+#define DIM 100
+
+int main() {
+
+  FILE *fileptr;
+  char vettore[DIM];
+  int size=1,n,i,len;
+
+  printf("Inserisci del testo: ");
+  scanf("%s",vettore);
+  len=strlen(vettore);
+
+  fileptr=fopen("file02","w");
+  n=fwrite(vettore,size,len,fileptr);
+  fclose(fileptr);
+}
+```
+
+---
+
+# I File: *sequenziale vs random*
+
+Posizionare il puntatore: `fseek()`
+
+Consente di posizionare il puntatore in una qualunque posizione all’interno del file (sia in lettura che in scrittura)
+
+`fseek(fp, n, 0)` fp viene posizionato sul n° byte a partire dall’inizio del file
+`fseek(fp, n, 1)` fp viene posizionato sul n° byte a partire dalla posizione attuale
+`fseek(fp, n, 2)` fp viene posizionato sul n° byte a partire dalla fine del file
+
+`n=ftell(fp)` //restituisce la posizione attuale del puntatore
