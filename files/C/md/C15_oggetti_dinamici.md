@@ -140,6 +140,8 @@ int main() {
     scanf("%d",p2);
 
     printf("La somma vale %d", *p1 + *p2);
+    free(p1);
+    free(p2);
     return 0;
 }
 ```
