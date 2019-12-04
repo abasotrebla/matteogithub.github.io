@@ -1,11 +1,11 @@
-<!-- footer: M Fraschini 2018-2019 -->
+<!-- footer: M Fraschini 2019-2020 -->
 
 <!-- page_number: true -->
 
 
 # C: Oggetti dinamici
 
-Elementi di Informatica 2018/2019
+Elementi di Informatica
 
 ---
 
@@ -13,9 +13,9 @@ Elementi di Informatica 2018/2019
 
 I puntatori possono essere usati per la creazione e la gestione di oggetti dinamici
 
-Gli oggetti dinamici sono creati durante l’esecuzione del programma. Non è quindi necessaria una dichiarazione esplicita: *non serve il nome e non serve conoscerne il numero*.
+Gli oggetti dinamici sono creati durante l’esecuzione del programma. Non è quindi necessaria una dichiarazione esplicita: *non serve il nome e non serve conoscerne il numero* a priori.
 
-La memoria viene allocata attraverso l’utilizzo di specifiche funzione: `malloc()`, che infatti restituisce un puntatore
+La memoria viene allocata attraverso l’utilizzo di specifiche funzioni: per esempio, `malloc()` (restituisce un puntatore)
 
 
 ---
@@ -56,6 +56,95 @@ free(p);
 
 ---
 
+# Esempio: step 1
+
+```C
+#include <stdio.h>
+
+int main() {
+    int n1,n2;
+
+    printf("Inserisci un numero: ");
+    scanf("%d",&n1);
+    printf("Inserisci un altro numero: ");
+    scanf("%d",&n2);
+
+    printf("La somma vale %d", n1 + n2);
+    return 0;
+}
+```
+
+---
+
+# Esempio: step 2
+
+```C
+#include <stdio.h>
+
+int main() {
+    int n1,n2;
+    int *p1,*p2;
+
+    printf("Inserisci un numero: ");
+    scanf("%d",&n1);
+    printf("Inserisci un altro numero: ");
+    scanf("%d",&n2);
+
+    p1=&n1;
+    p2=&n2;
+    printf("La somma vale %d", *p1 + *p2);
+    return 0;
+}
+```
+
+---
+
+# Esempio: step 3
+
+```C
+#include <stdio.h>
+
+int main() {
+    int n1,n2;
+    int *p1,*p2;
+
+    p1=&n1;
+    p2=&n2;
+
+    printf("Inserisci un numero: ");
+    scanf("%d",p1);
+    printf("Inserisci un altro numero: ");
+    scanf("%d",p2);
+
+    printf("La somma vale %d", *p1 + *p2);
+    return 0;
+}
+```
+---
+
+# Esempio: step 4
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *p1,*p2;
+
+    p1=(int *) malloc(sizeof(int));
+    p2=(int *) malloc(sizeof(int));
+
+    printf("Inserisci un numero: ");
+    scanf("%d",p1);
+    printf("Inserisci un altro numero: ");
+    scanf("%d",p2);
+
+    printf("La somma vale %d", *p1 + *p2);
+    return 0;
+}
+```
+---
+
 # Array e liste concatenate
 
 - Array: 
@@ -65,7 +154,93 @@ free(p);
 - Liste lineari:
 	- Insieme di elementi omogenei memorizzati in una posizione qualsiasi (semplicità di inserimento/eliminazione e spostamento)
 
-# ![](/Users/matteo/Downloads/images/lista.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/lista.png)
+
+---
+
+# Array dinamico: calloc()
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    int i,n;
+    int *ptr;
+
+    printf("Inserisce dimensione array: ");
+    scanf("%d",&n);
+
+    ptr=(int*) calloc(n, sizeof(int)); //init to 0!
+     for(i=0;i<n;i++) {
+         printf("\nInserisce valore: ");
+         scanf("%d",ptr+i);
+     }
+
+    for(i=0;i<n;i++)
+        printf("%d ",*(ptr+i));
+
+    free(ptr);
+}
+```
+
+---
+
+# Array dinamico: malloc()
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    int i,n;
+    int *ptr;
+
+    printf("Inserisce dimensione array: ");
+    scanf("%d",&n);
+
+    ptr=(int*) malloc(n * sizeof(int));
+     for(i=0;i<n;i++) {
+         printf("\nInserisce valore: ");
+         scanf("%d",ptr+i);
+     }
+
+    for(i=0;i<n;i++)
+        printf("%d ",*(ptr+i));
+
+    free(ptr);
+}
+```
+
+---
+
+# Array dinamico: con funzioni
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+void allocate_array(int size, int **p);
+
+int main () {
+    int i,n, * ptr;
+
+    printf("\nInserisce dimensione array: ");
+    scanf("%d",&n);
+    //printf("\n%p",ptr);
+    allocate_array(n,&ptr);
+    //*(ptr+1)=10;
+    for(i=0;i<n;i++) printf("%d ",*(ptr+i));
+    free(ptr);
+}
+
+void allocate_array(int size, int **p) {
+    int i;
+    *p=(int*) calloc(size, sizeof(int));
+    //*(*p+4)=200;
+    for(i=0;i<size;i++)
+        scanf("%d",*p+i);
+}
+```
 
 ---
 
