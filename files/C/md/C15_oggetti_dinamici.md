@@ -290,7 +290,7 @@ struct lista *crealista() {
     scanf("%d",&p->num);
     paux=p;
     for(i=2;i<=n;i++) {
- paux->next=(struct lista *)malloc(sizeof(struct lista));
+      paux->next=(struct lista *)malloc(sizeof(struct lista));
       paux=paux->next;
       printf("Inserisci valore: ");
       scanf("%d",&paux->num);
