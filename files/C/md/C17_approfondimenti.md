@@ -17,11 +17,11 @@ Elementi di Informatica
 #include <time.h>
 int rendi_random(int min, int max);
 int main() {
-  int i,num,min=0,max=10;|
+  int i,casuale,n_ripet=20,min=0,max=10;
   srand(time(0));
-  for(i=0;i<=10;i++) {
-    num=rendi_random(min, max);
-    printf("\nNumero casuale: %d",num);
+  for(i=0;i<=n_ripet;i++) {
+    casuale=rendi_random(min, max);
+    printf("\nNumero casuale: %d",casuale);
   }
   return 0;
 }
