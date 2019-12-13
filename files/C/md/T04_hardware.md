@@ -245,5 +245,3 @@ Sono state proposte alcune estensioni:
 La memoria cache è una memoria temporanea utilizzata per migliorare il trasferimento dei dati tra la memoria centrale e la CPU.
 
 La cache, sensibilmente più veloce della memoria centrale, contiene i dati usati più frequentemente/prababilmente dalla CPU, producendo così accessi più veloci.
-
-
