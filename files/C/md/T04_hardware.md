@@ -33,13 +33,13 @@ Le componenti fondamentali che costituiscono un calcolatore sono i **transistor*
 
 ---
 
-# ![](/Users/matteo/Downloads/images/moore.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/moore.png)
 
 ---
 
 # Macchina di Von Neumann
 
-# ![](/Users/matteo/Downloads/images/von.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/von.png)
 
 ---
 
@@ -144,7 +144,7 @@ In base al fenomeno fisico responsabile del processo di memorizzazione, vengono 
 - magnetiche
 - ottiche
 
-# ![](/Users/matteo/Downloads/images/mem.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/mem.png)
 
 ---
 
@@ -204,7 +204,7 @@ Caratteristica fondamentale della memoria centrale è la capacità di permettere
 # Memoria Centrale - RAM
 
 
-# ![](/Users/matteo/Downloads/images/ram.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/ram.png)
 
 ---
 
