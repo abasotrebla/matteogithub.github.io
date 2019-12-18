@@ -19,7 +19,7 @@ Elementi di Informatica
 ---
 # Definizione
 
-# ![](/Users/matteo/Downloads/images/algo.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/algo.png)
 
 ---
 # Definizione
@@ -30,7 +30,7 @@ Insieme di **istruzioni** che deve essere applicato per eseguire un’elaborazio
 
 # Definizione
 
-# ![](/Users/matteo/Downloads/images/lego.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/lego.png)
 
 ---
 
@@ -91,7 +91,7 @@ Le istruzioni che il calcolatore deve eseguire devono essere espresse attraverso
 - Compilazione (e/o interpretazione).
 - Compilatore e Linker.
 
-# ![](/Users/matteo/Downloads/images/compiler.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/compiler.png)
 
 ---
 

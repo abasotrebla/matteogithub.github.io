@@ -59,7 +59,7 @@ Il compito principale di un sistema operativo:
 
 **L'interfaccia**
 
-# ![](/Users/matteo/Downloads/images/interfaces.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/interfaces.png)
 
 ---
 
@@ -75,7 +75,7 @@ Struttura organizzata su diversi livelli: gerarchia di macchine virtuali, con il
 
 # Architettura di un Sistema Operativo
 
-# ![](/Users/matteo/Downloads/images/strati.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/strati.png)
 
 ---
 
@@ -83,7 +83,7 @@ Struttura organizzata su diversi livelli: gerarchia di macchine virtuali, con il
 
 Il sistema operativo viene mandato in esecuzione al momento dell'accensione del calcolatore (bootstrap)
 
-# ![](/Users/matteo/Downloads/images/boots.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/boots.png)
 
 ---
 
@@ -145,7 +145,7 @@ Ma la CPU viene sfruttata al meglio? …no, si spreca molto tempo!
 
 # Stati di un processo
 
-# ![](/Users/matteo/Downloads/images/proc01.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/proc01.png)
 
 ---
 
@@ -177,7 +177,7 @@ Requisito fondamentale: consentire a utenti/programmi diversi la condivisione de
 
 # Il Nucleo
 
-# ![](/Users/matteo/Downloads/images/kernel.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/kernel.png)
 
 
 ---
@@ -198,7 +198,7 @@ Requisito fondamentale: consentire a utenti/programmi diversi la condivisione de
 
 # Stati di un processo
 
-# ![](/Users/matteo/Downloads/images/proc02.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/proc02.png)
 
 ---
 
@@ -210,7 +210,7 @@ In un processo è possibile distinguere due componenti
 
 È pensabile e vantaggioso avere più esecuzioni per lo stesso processo, che ne condividono le risorse. Ciascuna di queste è denominata **thread**
 
-# ![](/Users/matteo/Downloads/images/thread.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/thread.png)
 
 ---
 
@@ -240,7 +240,7 @@ Il gestore della memoria si preoccupa di condividere la RAM tra i vari processi 
 # Gestore della memoria
 
 
-# ![](/Users/matteo/Downloads/images/so_mem.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/so_mem.png)
 
 
 ---
@@ -269,7 +269,7 @@ Paginazione: lo spazio di indirizzamento di ogni processo è diviso in *fette* (
 
 **Gestione dinamica**
 
-# ![](/Users/matteo/Downloads/images/so_din.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/so_din.png)
 
 ---
 
@@ -326,7 +326,7 @@ File -> block 1001, 1002, … (Physical)
 
 Un file è costituito da un record…
 
-# ![](/Users/matteo/Downloads/images/FS.png)
+# ![](/Users/matteofraschini/Documents/GitHub/matteogithub.github.io/files/images/FS.png)
 
 
 ---
